@@ -15,7 +15,7 @@ export default function Header() {
 
           <nav className="">
             <ul className="flex text-whiteFont">
-              <div className="flex max-[745px]:flex-col-reverse max-[745px]:gap-6">
+              <div className="flex max-[745px]:flex-col-reverse max-[745px]:gap-6 max-[375px]:mt-14">
                 <li className="mr-12">
                   <Link className="flex text-m" href="/catalog">
                     <SvgCatalogZaborIcon className="mr-2" />
@@ -30,7 +30,7 @@ export default function Header() {
                 </li>
               </div>
 
-              <li className="max-[745px]:absolute right-0 top-14">
+              <li className="max-[745px]:absolute right-0 top-14 max-[375px]:left-0 max-[375px]:top-[90px]">
                 <Link className="flex text-m" href="tel:+79680385550">
                   <SvgPhoneZaborIcon className="mr-2" />
                   +7 968 038-55-50
