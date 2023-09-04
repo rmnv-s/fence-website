@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      s: '1.2rem',
+      s: '1rem',
       sm: '1.4rem',
       base: '1.6rem',
       m: '1.8rem',
@@ -17,11 +17,16 @@ module.exports = {
       // '3xl': '1.953rem',
     },
     extend: {
+      gridTemplateColumns: {
+        'auto-fit-380px': 'repeat(auto-fit, minmax(380px, 1fr))',
+      },
+
       maxWidth: {
         100: '1300px',
       },
       colors: {
         whiteFont: '#D9D9D9',
+        white: '#F2F2F2',
         black: '#181818',
         yellow: '#FAFF00',
       },
