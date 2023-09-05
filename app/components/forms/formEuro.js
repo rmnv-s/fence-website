@@ -12,7 +12,7 @@ const FormEuro = () => {
 
     // Проверяем, что length не равно 0 и первая цифра больше 0
     if (!length || length === '0' || length.charAt(0) === '0') {
-      setError('Длина забора должна быть больше 0 и начинаться с цифры больше 0');
+      setError('Длина забора должна быть больше 0');
       return;
     } else {
       setError(''); // Очищаем сообщение об ошибке, если валидация прошла успешно
@@ -43,18 +43,16 @@ const FormEuro = () => {
 
             if (isValidInput) {
               setLength(inputValue);
-              setError(''); // Очищаем сообщение об ошибке при вводе правильных данных
-            } else {
-              setError('Длина забора должна быть числом от 1 до 9999'); // Устанавливаем сообщение об ошибке
             }
           }}
-          // className="border border-gray-300 rounded px-2 py-1 w-full"
           className={`border ${
             error ? 'border-red-500' : 'border-gray-300'
           } rounded px-2 py-1 w-full`}
           required
         />
       </div>
+      {error && <p className="text-red-500 text-sm mt-1">{error}</p>}{' '}
+      {/* Отображаем сообщение об ошибке */}
       <div className="mb-4">
         <label htmlFor="height" className="block text-gray-600 mb-2">
           Высота забора:
