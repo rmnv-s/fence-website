@@ -13,7 +13,7 @@ module.exports = {
       m: '1.8rem',
       l: '2.4rem',
       xl: '3rem',
-      '2xl': '3.6rem',
+      '2xl': '3.2rem',
       // '3xl': '1.953rem',
     },
     extend: {
