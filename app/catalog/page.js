@@ -1,3 +1,5 @@
-export default function Сatalog() {
-  return <h1>Страница каталога</h1>;
-}
+const Сatalog = () => {
+  return <></>;
+};
+
+export default Сatalog;
