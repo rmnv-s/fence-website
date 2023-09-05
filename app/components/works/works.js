@@ -53,7 +53,7 @@ const Works = () => {
 
   return (
     <>
-      <section className="pt-[10rem] pb-[20rem]">
+      <section className="pt-[10rem] pb-[5rem]">
         <Wrapper>
           <h2 className="text-black mb-24"> Наши работы </h2>
 

@@ -6,7 +6,7 @@ import SvgLocationFooterIcon from '@/components/assets/location-phone.icon';
 
 const Contact = () => {
   return (
-    <section className="bg-black py-4 text-whiteFont py-28">
+    <section className="bg-black text-whiteFont py-28">
       <Wrapper>
         <h2 className="text-2xl mb-20">Контакты</h2>
 
