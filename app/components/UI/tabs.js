@@ -13,13 +13,13 @@ const Tabs = () => {
 
   const tabContents = [
     // Здесь вы можете поместить контент для каждого таба
-    <div key={0}>Содержимое для Tab 1</div>,
+    <div key={0}>Профнастил</div>,
     <div key={1}>
       <FormEuro />
     </div>,
-    <div key={2}>Содержимое для Tab 3</div>,
-    <div key={3}>Содержимое для Tab 4</div>,
-    <div key={4}>Содержимое для Tab 5</div>,
+    <div key={2}>Рабица</div>,
+    <div key={3}>Ворота</div>,
+    <div key={4}>Навесы</div>,
   ];
 
   return (
