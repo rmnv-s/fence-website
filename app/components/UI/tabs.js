@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import Wrapper from '@/components/wrapper/wrapper';
 import FormEuro from '@/components/forms/formEuro';
 import FormProfnastil from '@/components/forms/formProfnastil';

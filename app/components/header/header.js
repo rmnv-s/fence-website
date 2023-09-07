@@ -17,7 +17,7 @@ export default function Header() {
             <ul className="flex text-whiteFont">
               <div className="flex max-[745px]:flex-col-reverse max-[745px]:gap-6 max-[375px]:mt-14">
                 <li className="mr-12">
-                  <Link className="flex text-m" href="/catalog">
+                  <Link className="flex text-m" href="/#catalog">
                     <SvgCatalogZaborIcon className="mr-2" />
                     Каталог
                   </Link>

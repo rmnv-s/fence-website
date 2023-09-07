@@ -25,7 +25,8 @@ const CardItem = ({ id, img, title, price }) => {
             className="text-m uppercase border border-solid border-black text-center py-8 transition-all duration-500 ease-in-out hover:bg-yellow"
             href="/calculator"
           >
-            Заказать
+            {/* Заказать */}
+            Расчитать
           </Link>
         </div>
       </li>

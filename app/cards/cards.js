@@ -6,7 +6,7 @@ import CardItem from './card-item';
 const Cards = () => {
   return (
     <>
-      <section className="bg-black pt-[7.5rem] pb-[20rem]">
+      <section id="catalog" className="bg-black pt-[7.5rem] pb-[20rem]">
         <Wrapper>
           <h2 className="text-whiteFont mb-20">Каталог продукции</h2>
           <div>
