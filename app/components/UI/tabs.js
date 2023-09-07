@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Wrapper from '@/components/wrapper/wrapper';
 import FormEuro from '@/components/forms/formEuro';
+import FormProfnastil from '@/components/forms/formProfnastil';
 
 const Tabs = () => {
   const tabTitles = ['Профнастил', 'Штакетник', 'Сетка Рабица', 'Откатные ворота', 'Навесы'];
@@ -13,7 +14,9 @@ const Tabs = () => {
 
   const tabContents = [
     // Здесь вы можете поместить контент для каждого таба
-    <div key={0}>Профнастил</div>,
+    <div key={0}>
+      <FormProfnastil />
+    </div>,
     <div key={1}>
       <FormEuro />
     </div>,
