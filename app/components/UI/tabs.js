@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import Wrapper from '@/components/wrapper/wrapper';
 import FormEuro from '@/components/forms/formEuro';
 import FormProfnastil from '@/components/forms/formProfnastil';
+import FormRabiza from '@/components/forms/formRabiza';
+import FormGates from '@/components/forms/formGates';
+import FormNaves from '@/components/forms/formNaves';
 
 const Tabs = () => {
-  const tabTitles = ['Профнастил', 'Штакетник', 'Сетка Рабица', 'Откатные ворота', 'Навесы'];
+  const tabTitles = ['Профнастил', 'Штакетник', 'Сетка рабица / 3D', 'Откатные ворота', 'Навесы'];
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index) => {
@@ -20,9 +23,15 @@ const Tabs = () => {
     <div key={1}>
       <FormEuro />
     </div>,
-    <div key={2}>Рабица</div>,
-    <div key={3}>Ворота</div>,
-    <div key={4}>Навесы</div>,
+    <div key={2}>
+      <FormRabiza />
+    </div>,
+    <div key={3}>
+      <FormGates />
+    </div>,
+    <div key={4}>
+      <FormNaves />
+    </div>,
   ];
 
   return (
