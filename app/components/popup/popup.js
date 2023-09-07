@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import SvgCloseIcon from '@/components/assets/close-popup-icon';
-import Input from 'react-phone-number-input/input';
 import InputMask from 'react-input-mask';
 
 const Popup = ({ onClose }) => {
