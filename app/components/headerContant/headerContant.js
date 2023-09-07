@@ -1,8 +1,25 @@
+'use client';
+import React, { useState } from 'react';
 import Button from '../UI/buttons';
 import Image from 'next/image';
+import Popup from '@/components/popup/popup';
 import mainPageBG from '../../../public/img/main-bg.jpg';
 
 const HeaderContent = () => {
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setPopupVisible(true);
+    console.log('Кнопка "Заказать звонок" ');
+  };
+
+  const handleClosePopup = () => {
+    setPopupVisible(false);
+  };
+  const handleSubmitPopup = (data) => {
+    console.log('Submitted data:', data);
+    // Здесь можете добавить логику для обработки отправки данных
+  };
   return (
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
@@ -22,7 +39,12 @@ const HeaderContent = () => {
             <p className="text-whiteFont text-l leading-[3.2rem] max-w-[52.9rem] mb-20 max-[320px]:text-[1.8rem]">
               С нами ваш идеальный забор становится реальностью без лишних хлопот
             </p>
-            <Button className="px-10 py-5 text-sm" text="Заказать звонок" />
+            <Button
+              onClick={handleButtonClick}
+              className="px-10 py-5 text-sm"
+              text="Заказать звонок"
+            />
+            {isPopupVisible && <Popup onClose={handleClosePopup} onSubmit={handleSubmitPopup} />}
           </div>
         </div>
       </div>

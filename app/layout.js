@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
         {children}
         <Contact />
         <Footer />
+        <div id="popup-root"></div>
       </body>
     </html>
   );
