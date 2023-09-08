@@ -20,13 +20,6 @@ const Popup = ({ onClose }) => {
       return;
     }
 
-    // if (isPhoneIncomplete) {
-    //   setPhoneError('Введите корректный номер телефона');
-    //   return;
-    // } else {
-    //   setPhoneError('');
-    // }
-    // Проверка на пустой номер телефона
     if (!phone || isPhoneIncomplete) {
       setPhoneError('Введите корректный номер телефона');
       return;
@@ -127,7 +120,6 @@ const Popup = ({ onClose }) => {
               setPhoneError('');
             }
           }}
-          alwaysShowMask
           required
         />
 
