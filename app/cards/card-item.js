@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const CardItem = ({ id, img, title, price }) => {
+const CardItem = ({ id, img, title, price, link }) => {
   return (
     <>
       <li className="bg-white px-8 pt-8 pb-10 flex flex-col">
@@ -17,7 +17,9 @@ const CardItem = ({ id, img, title, price }) => {
         <div className="flex flex-col">
           <Link
             className="text-m font-bold mb-12 max-w-[103px] opacity-70 hover:opacity-100"
-            href={`/cards/${id}`}
+            // href={`/cards/${id}`}
+            // href="#"
+            href={link}
           >
             Подробнее
           </Link>

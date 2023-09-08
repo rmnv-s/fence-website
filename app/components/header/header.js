@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <div className="bg-black ">
       <Wrapper>
-        <header className="flex justify-between relative z-10 items-center pt-6 flex-wrap max-[745px]:flex-col max-[745px]:items-start max-[745px]:gap-12">
+        <header className="flex justify-between relative z-10 items-center pt-6 pb-6 flex-wrap max-[745px]:flex-col max-[745px]:items-start max-[745px]:gap-12">
           <Link href="/">
             <SvgZaborLogo className="" />
           </Link>

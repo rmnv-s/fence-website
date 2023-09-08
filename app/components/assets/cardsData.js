@@ -10,30 +10,35 @@ export const cardsData = [
     title: 'Заборы<br>из профнастила',
     img: card1,
     price: 1030,
+    link: '/profnastil',
   },
   {
     id: 'e2',
     title: 'Заборы<br>из евроштакетника',
     img: card2,
     price: 1030,
+    link: '/euroshtaketnik',
   },
   {
     id: 'e3',
     title: 'Заборы<br>из сетки рабицы',
     img: card3,
     price: 1030,
+    link: '/setka',
   },
   {
     id: 'e4',
     title: 'Ворота автоматические, распашные, откатные',
     img: card4,
     price: 1030,
+    link: '/vorota',
   },
   {
     id: 'e5',
     title: 'Навесы',
     img: card5,
     price: 1030,
+    link: '/naves',
   },
 ];
 

@@ -1,6 +1,5 @@
 import { formattedCardsData } from '../components/assets/cardsData';
 import Wrapper from '@/components/wrapper/wrapper';
-
 import CardItem from './card-item';
 
 const Cards = () => {
@@ -18,6 +17,7 @@ const Cards = () => {
                   img={card.img}
                   title={card.title}
                   price={card.price}
+                  link={card.link}
                 />
               ))}
             </ul>
