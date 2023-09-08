@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Wrapper from '@/components/wrapper/wrapper';
 import Tabs from '@/components/UI/tabs';
-
+import FormCall from '@/components/forms/formCall';
 import calculatorPageBG from '../../public/img/calculator-bg.png';
 
 const Calculator = () => {
@@ -25,6 +25,8 @@ const Calculator = () => {
         </Wrapper>
         <Tabs />
       </div>
+
+      <FormCall />
     </>
   );
 };

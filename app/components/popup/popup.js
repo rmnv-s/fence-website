@@ -72,7 +72,7 @@ const Popup = ({ onClose }) => {
           className="fixed top-0 left-0 w-full h-full bg-black opacity-80 z-10"
           onClick={onClose}
         />
-        <div className="fixed flex flex-col z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgwhite rounded-2xl  px-14 py-5">
+        <div className="fixed flex flex-col z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgwhite rounded-2xl px-14 py-5">
           <h2 className="text-base">
             Спасибо за заявку! <br /> Мы свяжемся с вами в ближайшее время!
           </h2>
@@ -145,7 +145,13 @@ const Popup = ({ onClose }) => {
             />
             <label htmlFor="agreement" className="text-sm text-greyFont">
               Согласен с{' '}
-              <a href="/policy-link" className="text-greyFont underline">
+              <a
+                className="text-greyFont underline"
+                href="/privacy/privacy.pdf"
+                alt="alt text"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Политикой конфиденциальности
               </a>
             </label>
