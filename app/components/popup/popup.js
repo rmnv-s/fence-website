@@ -20,7 +20,14 @@ const Popup = ({ onClose }) => {
       return;
     }
 
-    if (isPhoneIncomplete) {
+    // if (isPhoneIncomplete) {
+    //   setPhoneError('Введите корректный номер телефона');
+    //   return;
+    // } else {
+    //   setPhoneError('');
+    // }
+    // Проверка на пустой номер телефона
+    if (!phone || isPhoneIncomplete) {
       setPhoneError('Введите корректный номер телефона');
       return;
     } else {
@@ -60,19 +67,30 @@ const Popup = ({ onClose }) => {
   // Если форма была успешно отправлена, показываем сообщение
   if (formSubmitted) {
     return (
-      <div className="popup-overlay">
-        <div className="popup">
-          <h2>Форма успешно отправлена!</h2>
-          <button onClick={onClose}>Закрыть</button>
+      <>
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-80 z-10"
+          onClick={onClose}
+        />
+        <div className="fixed flex flex-col z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgwhite rounded-2xl  px-14 py-5">
+          <h2 className="text-base">
+            Спасибо за заявку! <br /> Мы свяжемся с вами в ближайшее время!
+          </h2>
+          <button onClick={onClose}>
+            <SvgCloseIcon className="absolute top-[-3.6rem] right-[-4rem] border-none bg-transparent cursor-pointer"></SvgCloseIcon>
+          </button>
         </div>
-      </div>
+      </>
     );
   }
 
   // В противном случае показываем форму для заполнения
   return ReactDOM.createPortal(
     <>
-      <div className="fixed top-0 left-0 w-full h-full bg-black opacity-80 z-10" />
+      <div
+        className="fixed top-0 left-0 w-full h-full bg-black opacity-80 z-10"
+        onClick={onClose}
+      />
       <div className="fixed flex flex-col z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgwhite rounded-2xl  px-14 pt-10 pb-12">
         <h2 className="text-l font-black mb-7">Обратный звонок</h2>
         <p className="text-sm max-w-[23.5rem] mb-12">
@@ -94,17 +112,25 @@ const Popup = ({ onClose }) => {
           maskChar="_"
           placeholder="+7 (___) ___-__-__"
           value={phone}
-          className="w-full text-sm border-b border-grey bg-transparent pb-2 focus:outline-none mb-2"
+          className={`w-full text-sm border-b border-grey bg-transparent pb-2 focus:outline-none mb-2 ${
+            phoneError ? 'placeholder-red-500' : ''
+          }`}
           onChange={(e) => {
             const phoneNumber = e.target.value.replace(/[^0-9]/g, '');
             setPhone(phoneNumber);
 
             // Проверяем, достаточно ли цифр в номере телефона
             setIsPhoneIncomplete(phoneNumber.length < 11);
+
+            // Если введенное значение удовлетворяет требованиям, сбрасываем ошибку
+            if (!phoneError) {
+              setPhoneError('');
+            }
           }}
           alwaysShowMask
           required
         />
+
         {isPhoneIncomplete && (
           <p className="text-black text-sm mt-1">Пожалуйста, введи свой номер телефона</p>
         )}
