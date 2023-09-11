@@ -19,12 +19,12 @@ const Profnastil = () => {
 
   const handleButtonClick = () => {
     setPopupVisible(true);
-    console.log('Кнопка "Заказать звонок" ');
   };
 
   const handleClosePopup = () => {
     setPopupVisible(false);
   };
+
   const handleSubmitPopup = (data) => {
     console.log('Submitted data:', data);
     // Здесь можете добавить логику для обработки отправки данных
@@ -42,7 +42,7 @@ const Profnastil = () => {
 
         <div className="flex items-center justify-start h-full max-w-100  m-auto px-10">
           <div className="relative mb-60">
-            <h1 className="font-bold text-whiteFont leading-[8.5rem] max-w-[76.8rem] mb-16 max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[6rem] max-[525px]:leading-[6rem]  text-[8.4rem] leading-[9rem]">
+            <h1 className="font-bold text-whiteFont leading-[8.5rem] max-w-[76.8rem] mb-16 max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[4.5rem] max-[525px]:leading-[6rem]  text-[8.4rem] leading-[9rem]">
               Забор из профнастила
             </h1>
             <p className="text-whiteFont text-m leading-[3.2rem] max-w-[52.9rem] mb-20 max-[320px]:text-[1.8rem]">
