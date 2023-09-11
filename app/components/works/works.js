@@ -68,40 +68,16 @@ const Works = () => {
             </div>
             <Slider {...settings} ref={(s) => setSwiper(s)}>
               <div>
-                <Image
-                  className=""
-                  src={img1}
-                  layout="responsive"
-                  objectFit="contain"
-                  alt="картинка"
-                />
+                <Image className="object-contain w-full" src={img1} alt="картинка" />
               </div>
               <div>
-                <Image
-                  className=""
-                  src={img2}
-                  layout="responsive"
-                  objectFit="contain"
-                  alt="картинка"
-                />
+                <Image className="object-contain w-full" src={img2} alt="картинка" />
               </div>
               <div>
-                <Image
-                  className=""
-                  src={img3}
-                  layout="responsive"
-                  objectFit="contain"
-                  alt="картинка"
-                />
+                <Image className="object-contain w-full" src={img3} alt="картинка" />
               </div>
               <div>
-                <Image
-                  className=""
-                  src={img4}
-                  layout="responsive"
-                  objectFit="contain"
-                  alt="картинка"
-                />
+                <Image className="object-contain w-full" src={img4} alt="картинка" />
               </div>
             </Slider>
           </div>

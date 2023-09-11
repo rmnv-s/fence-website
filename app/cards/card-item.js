@@ -12,7 +12,7 @@ const CardItem = ({ id, img, title, price, link }) => {
           {' '}
           Цена: от {price} ₽
         </p>
-        <Image className="mb-8" src={img} layout="responsive" objectFit="contain" alt={title} />
+        <Image className="mb-8 object-contain" src={img} alt={title} />
         {/* </div> */}
         <div className="flex flex-col">
           <Link
