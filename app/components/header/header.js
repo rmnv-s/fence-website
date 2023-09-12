@@ -31,7 +31,7 @@ export default function Header() {
               </div>
 
               <li className="max-[745px]:absolute right-0 top-14 max-[375px]:left-0 max-[375px]:top-[90px]">
-                <Link className="flex text-m" href="tel:+79680385550">
+                <Link className="flex text-m" href="tel:+79680385550" target="_blank">
                   <SvgPhoneZaborIcon className="mr-2" />
                   +7 968 038-55-50
                 </Link>
