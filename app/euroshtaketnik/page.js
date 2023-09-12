@@ -2,10 +2,8 @@
 import React, { useState } from 'react';
 import Button from '@/components/UI/buttons';
 import Image from 'next/image';
-import Link from 'next/link';
 import Popup from '@/components/popup/popup';
-import Wrapper from '@/components/wrapper/wrapper';
-import mainPageBG from '../../public/img/eurobg.webp';
+import mainPageBGEuro from '../../public/img/eurobg.webp';
 
 const Euroshtaketnik = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -18,17 +16,13 @@ const Euroshtaketnik = () => {
     setPopupVisible(false);
   };
 
-  const handleSubmitPopup = (data) => {
-    console.log('Submitted data:', data);
-    // Здесь можете добавить логику для обработки отправки данных
-  };
   return (
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
         <Image
           className="absolute inset-0 w-full h-full z-0"
           alt="забор"
-          src={mainPageBG}
+          src={mainPageBGEuro}
           placeholder="blur"
           priority
         />
@@ -46,7 +40,7 @@ const Euroshtaketnik = () => {
               className="px-10 py-5 text-sm"
               text="Заказать звонок"
             />
-            {isPopupVisible && <Popup onClose={handleClosePopup} onSubmit={handleSubmitPopup} />}
+            {isPopupVisible && <Popup onClose={handleClosePopup} />}
           </div>
         </div>
       </div>

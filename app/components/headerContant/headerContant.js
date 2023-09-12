@@ -10,16 +10,12 @@ const HeaderContent = () => {
 
   const handleButtonClick = () => {
     setPopupVisible(true);
-    console.log('Кнопка "Заказать звонок" ');
   };
 
   const handleClosePopup = () => {
     setPopupVisible(false);
   };
-  const handleSubmitPopup = (data) => {
-    console.log('Submitted data:', data);
-    // Здесь можете добавить логику для обработки отправки данных
-  };
+
   return (
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
@@ -44,7 +40,7 @@ const HeaderContent = () => {
               className="px-10 py-5 text-sm"
               text="Заказать звонок"
             />
-            {isPopupVisible && <Popup onClose={handleClosePopup} onSubmit={handleSubmitPopup} />}
+            {isPopupVisible && <Popup onClose={handleClosePopup} />}
           </div>
         </div>
       </div>

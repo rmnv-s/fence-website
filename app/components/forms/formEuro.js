@@ -34,9 +34,7 @@ const FormEuro = () => {
       const totalPrice = price * parseFloat(length);
       // Устанавливаем итоговую стоимость в состояние
       setTotalPrice(totalPrice);
-      console.log('Total:', totalPrice);
     }
-    console.log(selectedOption);
   };
 
   return (

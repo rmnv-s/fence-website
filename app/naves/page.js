@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Popup from '@/components/popup/popup';
 import Wrapper from '@/components/wrapper/wrapper';
-import mainPageBG from '../../public/img/navesbg.webp';
+import mainPageBGNaves from '../../public/img/navesbg.webp';
 
 const Naves = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -24,7 +24,7 @@ const Naves = () => {
         <Image
           className="absolute inset-0 w-full h-full z-0"
           alt="забор"
-          src={mainPageBG}
+          src={mainPageBGNaves}
           placeholder="blur"
           priority
         />

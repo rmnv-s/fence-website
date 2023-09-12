@@ -1,36 +1,6 @@
-import { useState } from 'react';
 import Link from 'next/link';
-import Button from '@/components/UI/buttons';
 
 const FormNaves = () => {
-  const [length, setLength] = useState('');
-
-  const [error, setError] = useState('');
-
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  // Функция для вычисления суммы
-  const calculateTotalPrice = () => {
-    // Преобразуйте введенное значение в число и умножьте на 4400
-    const price = parseFloat(length) * 4400;
-    // Обновите состояние суммы
-    setTotalPrice(price);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Проверяем, что length не равно 0 и первая цифра больше 0
-    if (!length || length === '0' || length.charAt(0) === '0') {
-      setError('Размер навеса должна быть больше 0');
-      return;
-    } else {
-      setError(''); // Очищаем сообщение об ошибке, если валидация прошла успешно
-    }
-
-    calculateTotalPrice();
-  };
-
   return (
     <>
       <div className="grid grid-cols-1  md:grid-cols-2 gap-24 mt-20">

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Popup from '@/components/popup/popup';
 import Wrapper from '@/components/wrapper/wrapper';
-import mainPageBG from '../../public/img/3Dbg.webp';
+import mainPageBGSetka from '../../public/img/3Dbg.webp';
 
 const Setka = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -28,7 +28,7 @@ const Setka = () => {
         <Image
           className="absolute inset-0 w-full h-full z-0"
           alt="забор"
-          src={mainPageBG}
+          src={mainPageBGSetka}
           placeholder="blur"
           priority
         />

@@ -18,9 +18,9 @@ const Contact = () => {
             </Link>
           </li>
           <li className="">
-            <Link className="flex text-m items-center" href="mailto:example@example.com">
+            <Link className="flex text-m items-center" href="mailto:stalnoyzabor@gmail.com">
               <SvgMailFooterIcon className="mr-4" />
-              staluzor@gmail.com
+              stalnoyzabor@gmail.com
             </Link>
           </li>
 

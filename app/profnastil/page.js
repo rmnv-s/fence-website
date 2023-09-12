@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Popup from '@/components/popup/popup';
 import Wrapper from '@/components/wrapper/wrapper';
 import SvgPhohIconYellow from '@/components/assets/phone-yellow.icon';
-import mainPageBG from '../../public/img/prof-bg.jpg';
+import mainPageBGProf from '../../public/img/prof-bg.jpg';
 import figure from '../../public/img/profnastil/figure.jpg';
 import c8 from '../../public/img/profnastil/с8.jpg';
 import c20 from '../../public/img/profnastil/с20.jpg';
@@ -35,7 +35,7 @@ const Profnastil = () => {
         <Image
           className="absolute inset-0 w-full h-full z-0"
           alt="забор"
-          src={mainPageBG}
+          src={mainPageBGProf}
           placeholder="blur"
           priority
         />
