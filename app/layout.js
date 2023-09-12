@@ -7,20 +7,29 @@ import Footer from '@/components/footer/footer';
 
 export const metadata = {
   title: 'Стальной забор',
-  description: 'Заборы под ключ',
+  description: 'Заборы под ключ | Стальной узор',
 
-  //   <meta property="og:type" content="website">
-  //   <meta property="og:url" content="url">
-  //   <meta property="og:title" content="title">
-  //   <meta property="og:description" content="description">
-  //   <meta property="og:image" content="image">
-  //
-  //   {/* <!-- Twitter --> */}
-  //   <meta property="twitter:card" content="image">
-  //   <meta property="twitter:url" content="url">
-  //   <meta property="twitter:title" content="title">
-  //   <meta property="twitter:description" content="description">
-  //   <meta property="twitter:image" content="image">
+  openGraph: {
+    title: 'Заборы под ключ | Стальной узор',
+    description: 'Строительство заборов под ключ из качественных материалов от производителя.',
+    url: '',
+    siteName: '',
+    images: [
+      {
+        url: '',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: '',
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {

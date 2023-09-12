@@ -52,8 +52,8 @@ const Naves = () => {
           <section className="mt-60">
             <div className="grid grid-cols-2">
               <h2 className="text-2xl font-bold mb-12 leading-[4rem]">
-                Мы специализируемся на изготовлении навесов для частных коттеджей, дач и загородных
-                домов.
+                Так же мы специализируемся на изготовлении навесов для частных коттеджей, дач и
+                загородных домов.
               </h2>
 
               <p className="text-l leading-[3.2rem] mb-28 col-start-1 col-end-2">

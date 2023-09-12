@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Popup from '@/components/popup/popup';
 import Wrapper from '@/components/wrapper/wrapper';
 import mainPageBG from '../../public/img/vorotabg.webp';
+import vorota from '../../public/img/vorota.webp';
 
 const Vorota = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -46,6 +47,46 @@ const Vorota = () => {
           </div>
         </div>
       </div>
+
+      <main className=" z-10">
+        <Wrapper>
+          <section className="mt-60 mb-60">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <h2 className="text-2xl font-bold mb-12 leading-[4rem]">Откатные ворота</h2>
+
+              <p className="text-l leading-[3.2rem] mb-28 col-start-1 col-end-2">
+                Ворота этого типа, с калиткой или без нее, можно увидеть на дачных участках,
+                территориях загородных домов, складских и коммерческих помещений, объектов
+                промышленного назначения. Откатные ворота для дачи или коттеджа открывают проем для
+                въезда машины путем сдвигания створки вбок. Установка автоматики позволяет сделать
+                ворота более удобными в использовании.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+              <Image className="" alt="забор из евроштакетника" src={vorota} placeholder="blur" />
+
+              <ul className="list-disc ml-6 text-l font-bold leading-[3rem]">
+                Основные элементы конструкции:
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  Каркас. Для его изготовления используется швеллер для направляющей балки,
+                  профтруба 60х30 мм и 40х20 мм — для рамы, труба 40х20 мм — для откосов
+                </li>
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  Роликовый механизм. Опорная балка с роликами принимает на себя серьезные
+                  вертикальные и горизонтальные нагрузки — ветровую, снеговую, вес самой
+                  конструкции. Для ее установки заливают бетонную тумбу размером 2х1,5 м, на которую
+                  и монтируют сам роликовый механизм.
+                </li>
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  Двигатель. Раздвижные ворота для дачи или частного дома комплектуются итальянским
+                  двигателем Came
+                </li>
+              </ul>
+            </div>
+          </section>
+        </Wrapper>
+      </main>
     </>
   );
 };

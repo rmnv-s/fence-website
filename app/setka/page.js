@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Popup from '@/components/popup/popup';
 import Wrapper from '@/components/wrapper/wrapper';
 import mainPageBGSetka from '../../public/img/3Dbg.webp';
+import rabizaSetka from '../../public/img/rabiza.webp';
+import threeD from '../../public/img/3D.webp';
 
 const Setka = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -50,6 +52,80 @@ const Setka = () => {
           </div>
         </div>
       </div>
+
+      <main className=" z-10">
+        <Wrapper>
+          <section className="mt-60 mb-40">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <h2 className="text-2xl font-bold mb-12 leading-[4rem]">Заборы 3D</h2>
+
+              <p className="text-l leading-[3.2rem] mb-28 col-start-1 col-end-2">
+                Заборы из 3D панелей используются для ограждения садовых участков, детских площадок,
+                теннисных кортов, административных зданий.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+              <Image className="" alt="забор из евроштакетника" src={threeD} placeholder="blur" />
+
+              <ul className="list-disc ml-6 text-l font-bold leading-[3rem]">
+                Панельные ограждения изготавливаются из сварной сетки — оцинкованной или с
+                полимерным напылением. Благодаря V- образному рифлению проволок достигается эффект
+                объема, обеспечивается конструкционная жесткость секций.
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  3 мм — временные, подходят для установки вокруг стройплощадок
+                </li>
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  4 мм — надежные/стандарт, используются для спортплощадок, школ, детских садов,
+                  дачных участков, загородных домов
+                </li>
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  5 мм — прочные/премиум, применяются для установки вокруг заповедных зон, режимных
+                  объектов, промзон, аэропортов, трасс, магистралей
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="mt-60 mb-60">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <h2 className="text-2xl font-bold mb-12 leading-[4rem]">Заборы из сетки рабица</h2>
+
+              <p className="text-l leading-[3.2rem] mb-28 col-start-1 col-end-2">
+                Заборы из рабицы используются для ограждения садовых или дачных участков. Они
+                отличаются надежностью, прочностью, не создают тени, не мешают свободному
+                прохождению воздуха
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+              <ul className="list-disc ml-6 text-l font-bold leading-[3rem]">
+                Забор из рабицы представляет собой вертикальные опоры с растянутой между ними
+                сеткой. Каждая опора оснащена 4 крюками, которые идут сверху вниз на одинаковом
+                расстоянии друг от друга. Крючки нужны для навешивания и фиксации полотна.
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  Без протяжки арматуры. Проволочное полотно растягивается между столбами, а затем
+                  фиксируется крюками.
+                </li>
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  С одной протяжкой. Горизонтальный арматурный прут продевается через ячейки полотна
+                  каждого пролета, приваривается к столбам.
+                </li>
+                <li className="text-m font-medium ml-8 mt-8 mb-4">
+                  С двумя протяжками. В этом случае используется два ряда стальной арматуры. Она
+                  проходит на расстоянии 15-30 см от верхнего и нижнего края сетки.
+                </li>
+              </ul>
+              <Image
+                className=""
+                alt="забор из евроштакетника"
+                src={rabizaSetka}
+                placeholder="blur"
+              />
+            </div>
+          </section>
+        </Wrapper>
+      </main>
     </>
   );
 };

@@ -25,10 +25,6 @@ const Profnastil = () => {
     setPopupVisible(false);
   };
 
-  const handleSubmitPopup = (data) => {
-    console.log('Submitted data:', data);
-    // Здесь можете добавить логику для обработки отправки данных
-  };
   return (
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
@@ -54,7 +50,7 @@ const Profnastil = () => {
               className="px-10 py-5 text-sm"
               text="Заказать звонок"
             />
-            {isPopupVisible && <Popup onClose={handleClosePopup} onSubmit={handleSubmitPopup} />}
+            {isPopupVisible && <Popup onClose={handleClosePopup} />}
           </div>
         </div>
       </div>
@@ -104,7 +100,11 @@ const Profnastil = () => {
                 <p className="text-xl text-whiteFont mb-12 leading-[3.5rem]">
                   Закажите забор из профнастила прямо сейчас по телефону
                 </p>
-                <Link className="flex text-m text-yellow text-xl" href="tel:+79680385550">
+                <Link
+                  className="flex text-m text-yellow text-xl"
+                  href="tel:+79680385550"
+                  target="_blank"
+                >
                   <SvgPhohIconYellow className="mr-2" />
                   +7 968 038-55-50
                 </Link>
