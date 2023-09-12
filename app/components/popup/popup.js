@@ -84,8 +84,8 @@ const Popup = ({ onClose }) => {
         className="fixed top-0 left-0 w-full h-full bg-black opacity-80 z-10"
         onClick={onClose}
       />
-      <div className="fixed flex flex-col z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgwhite rounded-2xl  px-14 pt-10 pb-12">
-        <h2 className="text-l font-black mb-7">Обратный звонок</h2>
+      <div className="min-w-[300px] fixed flex flex-col z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgwhite rounded-2xl px-10 pt-10 pb-12 sm:px-14">
+        <h2 className="text-m font-black mb-7 md:text-l">Обратный звонок</h2>
         <p className="text-sm max-w-[23.5rem] mb-12">
           Заполните заявку и мы с Вами свяжемся в течении 15 минут
         </p>
@@ -157,7 +157,7 @@ const Popup = ({ onClose }) => {
           Перезвоните мне
         </button>
         <button onClick={onClose}>
-          <SvgCloseIcon className="absolute top-[-3.6rem] right-[-4rem] border-none bg-transparent cursor-pointer"></SvgCloseIcon>
+          <SvgCloseIcon className="sm:top-[-4.6rem] sm:right-[-3.5rem] top-[-4.6rem] right-0 absolute border-none bg-transparent cursor-pointer "></SvgCloseIcon>
         </button>
       </div>
     </>,
