@@ -106,7 +106,7 @@ const Profnastil = () => {
                   target="_blank"
                 >
                   <SvgPhohIconYellow className="mr-2" />
-                  +7 968 038-55-50
+                  +7 495 151-56-71
                 </Link>
               </div>
               <Image className="" alt="описание штакетников" src={baner} placeholder="blur" />

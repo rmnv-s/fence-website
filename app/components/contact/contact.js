@@ -12,9 +12,9 @@ const Contact = () => {
 
         <ul className="flex justify-between flex-wrap gap-8 ">
           <li className="">
-            <Link className="flex text-m items-center" href="tel:+79680385550" target="_blank">
+            <Link className="flex text-m items-center" href="tel:+74951515671" target="_blank">
               <SvgPhoneFooterIcon className="mr-4" />
-              +7 968 038-55-50
+              +7 495 151-56-71
             </Link>
           </li>
           <li className="">
