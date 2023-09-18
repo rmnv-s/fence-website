@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from '../UI/buttons';
 import Image from 'next/image';
 import Popup from '@/components/popup/popup';
-import mainPageBG from '../../../public/img/main-bg.jpg';
+import mainPageBG from '../../../public/img/main-bg.webp';
 
 const HeaderContent = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -20,7 +20,7 @@ const HeaderContent = () => {
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
         <Image
-          className="absolute inset-0 w-full h-full z-0"
+          className="absolute inset-0 w-full h-full z-0 object-cover"
           alt="забор"
           src={mainPageBG}
           placeholder="blur"

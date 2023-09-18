@@ -22,7 +22,7 @@ const Naves = () => {
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
         <Image
-          className="absolute inset-0 w-full h-full z-0"
+          className="absolute inset-0 w-full h-full z-0 object-cover"
           alt="забор"
           src={mainPageBGNaves}
           placeholder="blur"
@@ -50,13 +50,13 @@ const Naves = () => {
       <main className=" z-10">
         <Wrapper>
           <section className="mt-60">
-            <div className="grid grid-cols-2">
-              <h2 className="text-2xl font-bold mb-12 leading-[4rem]">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <h2 className="text-l font-bold mb-12 leading-[4rem] sm:text-2xl">
                 Так же мы специализируемся на изготовлении навесов для частных коттеджей, дач и
                 загородных домов.
               </h2>
 
-              <p className="text-l leading-[3.2rem] mb-28 col-start-1 col-end-2">
+              <p className="text-base leading-[3.2rem] mb-28 col-start-1 col-end-2 sm:text-l">
                 Наши навесы доступны в различных вариантах, призванных обеспечивать надежную защиту
                 от природных воздействий, таких как погодные условия, солнце и дождь.
               </p>

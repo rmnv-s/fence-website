@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Button from '@/components/UI/buttons';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import Popup from '@/components/popup/popup';
 import Wrapper from '@/components/wrapper/wrapper';
 import mainPageBGSetka from '../../public/img/3Dbg.webp';
@@ -28,7 +28,7 @@ const Setka = () => {
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
         <Image
-          className="absolute inset-0 w-full h-full z-0"
+          className="absolute inset-0 w-full h-full z-0 object-cover"
           alt="забор"
           src={mainPageBGSetka}
           placeholder="blur"
@@ -68,7 +68,7 @@ const Setka = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
               <Image className="" alt="забор из евроштакетника" src={threeD} placeholder="blur" />
 
-              <ul className="list-disc ml-6 text-l font-bold leading-[3rem]">
+              <ul className="list-disc ml-6 text-m font-bold leading-[3rem] md:text-l">
                 Панельные ограждения изготавливаются из сварной сетки — оцинкованной или с
                 полимерным напылением. Благодаря V- образному рифлению проволок достигается эффект
                 объема, обеспечивается конструкционная жесткость секций.
@@ -99,7 +99,7 @@ const Setka = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
-              <ul className="list-disc ml-6 text-l font-bold leading-[3rem]">
+              <ul className="list-disc ml-6 text-m font-bold leading-[3rem] md:text-l">
                 Забор из рабицы представляет собой вертикальные опоры с растянутой между ними
                 сеткой. Каждая опора оснащена 4 крюками, которые идут сверху вниз на одинаковом
                 расстоянии друг от друга. Крючки нужны для навешивания и фиксации полотна.

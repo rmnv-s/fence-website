@@ -13,22 +13,32 @@ export const metadata = {
     title: 'Заборы под ключ | Стальной узор',
     description: 'Строительство заборов под ключ из качественных материалов от производителя.',
     url: '',
-    siteName: '',
+    siteName: 'Стальной забор',
     images: [
       {
-        url: '',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: '',
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
+        url: './MetaTagsZabor.jpg',
+        width: 1200,
+        height: 628,
+        alt: 'Стальной забор',
       },
     ],
 
     type: 'website',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Заборы под ключ | Стальной узор',
+    description: 'Строительство заборов под ключ из качественных материалов от производителяt',
+
+    images: [
+      {
+        url: '/MetaTagsZabor.jpg',
+        width: 1200,
+        height: 628,
+        alt: 'Стальной забор',
+      },
+    ],
   },
 };
 

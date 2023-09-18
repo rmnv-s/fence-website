@@ -29,7 +29,7 @@ const Profnastil = () => {
     <>
       <div className="w-screen h-screen relative max-[745px]:h-[85vh]">
         <Image
-          className="absolute inset-0 w-full h-full z-0"
+          className="absolute inset-0 w-full h-full z-0 object-cover"
           alt="забор"
           src={mainPageBGProf}
           placeholder="blur"
