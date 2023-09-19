@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
         <div id="popup-root"></div>
       </body>
