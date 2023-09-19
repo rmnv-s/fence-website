@@ -23,7 +23,7 @@ const Footer = () => {
           <li className="">
             <Link
               className="flex text-m items-center"
-              href="mailto:stalnoyzabor@gmail.com"
+              href="mailto:stalnuzor@gmail.com"
               target="_blank"
             >
               <SvgMailFooterIcon className="mr-4" />

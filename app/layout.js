@@ -7,6 +7,7 @@ import Footer from '@/components/footer/footer';
 export const metadata = {
   title: 'Стальной узор',
   description: 'Заборы под ключ | Стальной узор',
+  colorScheme: '#717171',
 
   openGraph: {
     title: 'Заборы под ключ | Стальной узор',
