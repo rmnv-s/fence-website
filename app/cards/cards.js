@@ -7,7 +7,7 @@ const Cards = () => {
     <>
       <section id="catalog" className="bg-black pt-[7.5rem] pb-[20rem]">
         <Wrapper>
-          <h2 className="text-whiteFont mb-20">Каталог продукции</h2>
+          <h2 className="text-whiteFont mb-20 leading-[3.2rem]">Каталог продукции</h2>
           <div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
               {formattedCardsData.map((card) => (

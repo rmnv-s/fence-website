@@ -24,7 +24,7 @@ const Contact = () => {
               target="_blank"
             >
               <SvgMailFooterIcon className="mr-4" />
-              stalnoyzabor@gmail.com
+              stalnuzor@gmail.com
             </Link>
           </li>
 

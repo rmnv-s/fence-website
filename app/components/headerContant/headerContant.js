@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from '../UI/buttons';
 import Image from 'next/image';
 import Popup from '@/components/popup/popup';
-import mainPageBG from '../../../public/img/main-bg.webp';
+import mainPageBG from '../../../public/img/main-bg-1.webp';
 
 const HeaderContent = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);

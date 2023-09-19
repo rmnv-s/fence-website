@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-black pb-4">
       <Wrapper>
         <div className="flex justify-between items-center max-[425px]:flex-col max-[425px]:mb-4">
-          <p className="text-[16px] py-10 text-white opacity-75"> © 2015-2023 Стальной забор </p>
+          <p className="text-[16px] py-10 text-white opacity-75"> © 2015-2023 Стальной узор </p>
           <ul className="flex items-center">
             <li>
               <Link className="" href="#">
