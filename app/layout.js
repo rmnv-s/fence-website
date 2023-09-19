@@ -6,7 +6,7 @@ import Contact from '@/components/contact/contact';
 import Footer from '@/components/footer/footer';
 
 export const metadata = {
-  title: 'Стальной забор',
+  title: 'Стальной узор',
   description: 'Заборы под ключ | Стальной узор',
 
   openGraph: {
