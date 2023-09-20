@@ -6,7 +6,7 @@ import SvgMailFooterIcon from '@/components/assets/mail-footer.icon';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-whiteFont py-28">
+    <footer id="footer" className="bg-black text-whiteFont py-28">
       <Wrapper>
         <h2 className="text-2xl mb-20">Контакты</h2>
 
