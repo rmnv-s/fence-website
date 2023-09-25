@@ -36,7 +36,7 @@ export const metadata = {
         url: '/MetaTagsZabor.jpg',
         width: 1200,
         height: 628,
-        alt: 'Стальной забор',
+        alt: 'Стальной узор',
       },
     ],
   },

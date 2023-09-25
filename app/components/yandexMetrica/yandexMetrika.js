@@ -13,6 +13,7 @@ export const YandexMetrika = ({ yid }) => {
 			clickmap:true,
 			trackLinks:true,
 			accurateTrackBounce:true,
+			webvisor:true,
 		  });
 		`,
       }}
