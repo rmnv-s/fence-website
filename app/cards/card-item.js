@@ -7,7 +7,7 @@ const CardItem = ({ id, img, title, price, link }) => {
     <>
       <li className="bg-white px-8 pt-8 pb-10 flex flex-col">
         {/* <div className=""> */}
-        <h3 className="text-[2rem] text-black uppercase font-bold  mb-2"> {title} </h3>
+        <h3 className="text-[2rem] text-black uppercase font-bold  mb-[1rem]"> {title} </h3>
         <p className="text-m text-black font-medium mb-8 flex flex-1 flex-shrink-1 flex-grow-1">
           {' '}
           Цена: от {price} ₽
