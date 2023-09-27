@@ -41,7 +41,7 @@ export default function Header() {
                                     <li className="mr-12">
                                         <Link
                                             className="flex text-m smooth-scroll max-[440px]:text-sm"
-                                            href="/#footer"
+                                            href="/#contacts"
                                         >
                                             <SvgContactMenu className="mr-2" />
                                             Контакты
