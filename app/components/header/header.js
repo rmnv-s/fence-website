@@ -9,22 +9,22 @@ import Link from 'next/link';
 export default function Header() {
     return (
         <div className="bg-black ">
-            <header className="bg-black h-36 w-full fixed z-10 max-[810px]:h-64">
+            <header className="bg-black h-36 w-full fixed z-10 max-[810px]:h-[10.5rem]">
                 <Wrapper>
-                    <div className="flex justify-between relative z-10 items-end pt-6 pb-6 flex-wrap max-[745px]:flex-col max-[745px]:items-start ">
+                    <div className="flex justify-between relative z-10 items-end pt-6 pb-6 flex-wrap max-[768px]:flex-col max-[768px]:items-start ">
                         <Link href="/">
                             <SvgZaborLogo className="" />
                         </Link>
 
                         <nav className="max-[809px]:mt-6">
                             <ul className="flex text-whiteFont">
-                                <div className="flex max-[375px]:mt-5 flex-wrap gap-4">
+                                <div className="flex max-[375px]:mt-0 gap-4 max-[440px]:gap-2">
                                     <li className="mr-12">
                                         <Link
                                             className="flex text-m smooth-scroll max-[440px]:text-sm"
                                             href="/#catalog"
                                         >
-                                            <SvgCatalogZaborIcon className="mr-2" />
+                                            <SvgCatalogZaborIcon className="mr-2 max-[768px]:mr-0 max-[440px]:hidden" />
                                             Каталог
                                         </Link>
                                     </li>
@@ -33,7 +33,7 @@ export default function Header() {
                                             className="flex text-m max-[440px]:text-sm"
                                             href="/calculator"
                                         >
-                                            <SvgCalculatorZaborIcon className="mr-2" />
+                                            <SvgCalculatorZaborIcon className="mr-2 max-[768px]:mr-0 max-[440px]:hidden" />
                                             Калькулятор
                                         </Link>
                                     </li>
@@ -43,13 +43,13 @@ export default function Header() {
                                             className="flex text-m smooth-scroll max-[440px]:text-sm"
                                             href="/#contacts"
                                         >
-                                            <SvgContactMenu className="mr-2" />
+                                            <SvgContactMenu className="mr-2 max-[768px]:mr-0 max-[440px]:hidden" />
                                             Контакты
                                         </Link>
                                     </li>
                                 </div>
 
-                                <li className="max-[745px]:absolute right-0 top-16 max-[340px]:top-[4.5rem]">
+                                <li className="max-[768px]:absolute right-0 top-16 max-[340px]:top-[4.5rem]">
                                     <Link
                                         className="flex text-m max-[440px]:text-sm"
                                         href="tel:+74951515671"
