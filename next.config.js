@@ -1,12 +1,19 @@
 // /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
+    output: 'export',
+    images: {
+        unoptimized: true,
+    },
+    compress: true,
 };
 
-module.exports = nextConfig;
+// module.exports = nextConfig;
+module.exports = {
+    i18n: {
+        locales: ['ru'],
+        defaultLocale: 'ru',
+    },
+};
 
 /**
  * @type {import('next').NextConfig}

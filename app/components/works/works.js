@@ -22,6 +22,9 @@ import img10 from '../../../public/img/slider/img-10.webp';
 import img11 from '../../../public/img/slider/img-11.webp';
 import img12 from '../../../public/img/slider/img-12.webp';
 
+import imgNaves from '../../../public/img/slider/naves.webp';
+import imgNaves1 from '../../../public/img/slider/naves-1.webp';
+
 // Компоненты для кнопок "Previous" и "Next"
 const CustomPrevArrow = (props) => (
   <button {...props} className="prev-button" aria-label="Previous" onClick={props.onClick}>
@@ -87,6 +90,13 @@ const Works = () => {
               </div>
               <div>
                 <Image className="object-contain w-full" src={img4} alt="картинка" />
+              </div>
+
+              <div>
+                <Image className="object-contain w-full" src={imgNaves} alt="картинка" />
+              </div>
+              <div>
+                <Image className="object-contain w-full" src={imgNaves1} alt="картинка" />
               </div>
 
               <div>
