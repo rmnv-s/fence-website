@@ -1,4 +1,4 @@
-import Wrapper from '@/components/wrapper/wrapper';
+import Wrapper from '@/app/components/wrapper/wrapper';
 import Image from 'next/image';
 import avatar from '../../../public/img/comment-avatar.png';
 import avatar1 from '../../../public/img/comment-avatar-1.png';

@@ -1,9 +1,9 @@
-import HeaderContent from '@/components/headerContant/headerContant';
-import About from '@/components/about/about';
-import Contacts from '@/components/contacts/contacts';
+import HeaderContent from '@/app/components/headerContant/headerContant';
+import About from '@/app/components/about/about';
+import Contacts from '@/app/components/contacts/contacts';
 import Cards from './cards/cards';
-import Works from '@/components/works/works';
-import Comments from '@/components/comments/comments';
+import Works from '@/app/components/works/works';
+import Comments from '@/app/components/comments/comments';
 
 export default function Home() {
     return (

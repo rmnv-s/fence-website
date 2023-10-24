@@ -1,11 +1,11 @@
 'use client';
 import React, { useState } from 'react';
-import Button from '@/components/UI/buttons';
+import Button from '@/app/components/UI/buttons';
 import Image from 'next/image';
 import Link from 'next/link';
-import Popup from '@/components/popup/popup';
-import Wrapper from '@/components/wrapper/wrapper';
-import SvgPhohIconYellow from '@/components/assets/phone-yellow.icon';
+import Popup from '@/app/components/popup/popup';
+import Wrapper from '@/app/components/wrapper/wrapper';
+import SvgPhohIconYellow from '@/app/components/assets/phone-yellow.icon';
 import mainPageBGProf from '../../public/img/prof-bg.jpg';
 import figure from '../../public/img/profnastil/figure.jpg';
 import c8 from '../../public/img/profnastil/с8.jpg';
@@ -38,7 +38,7 @@ const Profnastil = () => {
 
                 <div className="flex items-center justify-start h-full max-w-100  m-auto px-10">
                     <div className="relative mb-60 max-[560px]:mb-0 mt-[150px]">
-                        <h1 className="font-bold text-whiteFont leading-[8.5rem] max-w-[76.8rem] mb-16 max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[4rem] max-[525px]:leading-[4rem]  text-[8.4rem] leading-[9rem] mb-6">
+                        <h1 className="font-bold text-whiteFont max-w-[76.8rem] max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[4rem] max-[525px]:leading-[4rem]  text-[8.4rem] leading-[9rem] mb-6">
                             Забор из профнастила
                         </h1>
                         <p className="text-whiteFont text-m leading-[3.2rem] max-w-[52.9rem] mb-20 max-[320px]:text-[1.8rem]">
@@ -133,7 +133,7 @@ const Profnastil = () => {
                                     Закажите забор из профнастила прямо сейчас по телефону
                                 </p>
                                 <Link
-                                    className="flex text-m text-yellow text-xl"
+                                    className="flex text-yellow text-xl"
                                     href="tel:+79680385550"
                                     target="_blank"
                                 >

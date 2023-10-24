@@ -1,11 +1,11 @@
 'use client';
 import React, { useState } from 'react';
-import Wrapper from '@/components/wrapper/wrapper';
+import Wrapper from '@/app/components/wrapper/wrapper';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import SvgArLeft from '@/components/assets/ar-left.icon';
-import SvgArRight from '@/components/assets/ar-right.icon';
+import SvgArLeft from '@/app/components/assets/ar-left.icon';
+import SvgArRight from '@/app/components/assets/ar-right.icon';
 
 import Image from 'next/image';
 import img1 from '../../../public/img/slider/img-1.webp';

@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Wrapper from '@/components/wrapper/wrapper';
-import FormEuro from '@/components/forms/formEuro';
-import FormProfnastil from '@/components/forms/formProfnastil';
-import FormRabiza from '@/components/forms/formRabiza';
-import FormGates from '@/components/forms/formGates';
-import FormNaves from '@/components/forms/formNaves';
+import Wrapper from '@/app/components/wrapper/wrapper';
+import FormEuro from '@/app/components/forms/formEuro';
+import FormProfnastil from '@/app/components/forms/formProfnastil';
+import FormRabiza from '@/app/components/forms/formRabiza';
+import FormGates from '@/app/components/forms/formGates';
+import FormNaves from '@/app/components/forms/formNaves';
 
 const Tabs = () => {
   const tabTitles = ['Профнастил', 'Штакетник', 'Сетка рабица / 3D', 'Откатные ворота', 'Навесы'];
@@ -48,7 +48,7 @@ const Tabs = () => {
                 activeTab === index ? 'bg-yellow' : 'bg-gray-200'
               } ${
                 index !== tabTitles.length - 1
-                  ? 'border-b border-black md:border-r border-black md:border-b-0'
+                  ? 'border-b md:border-r border-black md:border-b-0'
                   : ''
               } `}
               onClick={() => handleTabClick(index)}

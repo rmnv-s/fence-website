@@ -1,10 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import Button from '@/components/UI/buttons';
+import Button from '@/app/components/UI/buttons';
 import Image from 'next/image';
 
-import Popup from '@/components/popup/popup';
-import Wrapper from '@/components/wrapper/wrapper';
+import Popup from '@/app/components/popup/popup';
+import Wrapper from '@/app/components/wrapper/wrapper';
 import mainPageBGSetka from '../../public/img/3Dbg.webp';
 import rabizaSetka from '../../public/img/rabiza.webp';
 import threeD from '../../public/img/3D.webp';
@@ -37,7 +37,7 @@ const Setka = () => {
 
                 <div className="flex items-center justify-start h-full max-w-100  m-auto px-10">
                     <div className="relative mb-60 max-[560px]:mb-0 mt-[150px]">
-                        <h1 className="font-bold text-whiteFont leading-[8.5rem] max-w-[76.8rem] mb-16 max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[6rem] max-[525px]:leading-[6rem]  text-[8.4rem] leading-[9rem] mb-6">
+                        <h1 className="font-bold text-whiteFont max-w-[76.8rem] max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[6rem] max-[525px]:leading-[6rem]  text-[8.4rem] leading-[9rem] mb-6">
                             Забор 3D <br /> или сетки рабицы
                         </h1>
                         <p className="text-whiteFont text-m leading-[3.2rem] max-w-[41rem] mb-20 max-[320px]:text-[1.8rem]">
@@ -49,7 +49,7 @@ const Setka = () => {
                             text="Заказать звонок"
                         />
                         {isPopupVisible && (
-                            <Popup onClose={handleClosePopup} onSubmit={handleSubmitPopup} />
+                            <Popup onClose={handleClosePopup} />
                         )}
                     </div>
                 </div>

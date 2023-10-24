@@ -1,8 +1,8 @@
-import Wrapper from '@/components/wrapper/wrapper';
+import Wrapper from '@/app/components/wrapper/wrapper';
 import Link from 'next/link';
 
-import SvgPhoneFooterIcon from '@/components/assets/phone-footer.icon';
-import SvgMailFooterIcon from '@/components/assets/mail-footer.icon';
+import SvgPhoneFooterIcon from '@/app/components/assets/phone-footer.icon';
+import SvgMailFooterIcon from '@/app/components/assets/mail-footer.icon';
 
 const Footer = () => {
   return (

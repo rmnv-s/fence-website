@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Button from '../UI/buttons';
 import Image from 'next/image';
-import Popup from '@/components/popup/popup';
+import Popup from '@/app/components/popup/popup';
 import mainPageBG from '../../../public/img/main-bg-1.webp';
 
 const HeaderContent = () => {
@@ -29,7 +29,7 @@ const HeaderContent = () => {
 
                 <div className="flex items-center justify-start h-full max-w-100  m-auto px-10">
                     <div className="relative mb-60 max-[560px]:mb-0 mt-[180px]">
-                        <div className="flex justify-between items-center text-[#161616] text-l leading-[3.2rem] max-w-[49rem] mb-20  uppercase p-12 bg-yellow font-bold max-[440px]:text-base max-[440px]:flex-col max-[440px]:p-4 mb-8">
+                        <div className="flex justify-between items-center text-[#161616] text-l leading-[3.2rem] max-w-[49rem] uppercase p-12 bg-yellow font-bold max-[440px]:text-base max-[440px]:flex-col max-[440px]:p-4 mb-8">
                             <span className="text-[6.3rem] max-[425px]:mb-4 max-[440px]:text-xl">
                                 - 5%
                             </span>
@@ -37,10 +37,10 @@ const HeaderContent = () => {
                                 При заказе забора <br /> до 15 октября
                             </p>
                         </div>
-                        <h1 className="font-bold text-whiteFont leading-[8.5rem] max-w-[76.8rem] mb-16 max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[6rem] max-[525px]:leading-[6rem] text-[8.4rem] leading-[9rem] mb-6">
+                        <h1 className="font-bold text-whiteFont max-w-[76.8rem] max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[6rem] max-[525px]:leading-[6rem] text-[8.4rem] leading-[9rem] mb-6">
                             Установка заборов под ключ
                         </h1>
-                        <p className="text-whiteFont text-l leading-[3.2rem] max-w-[52.9rem] mb-6 max-[440px]:text-base mb-2 leading-[2.4rem]">
+                        <p className="text-whiteFont text-l max-w-[52.9rem] max-[440px]:text-base mb-2 leading-[2.4rem]">
                             С нами ваш идеальный забор становится реальностью без лишних хлопот
                         </p>
                         <Button

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Button from '@/components/UI/buttons';
+import Button from '@/app/components/UI/buttons';
 
 const FormNaves = () => {
   const [length, setLength] = useState('');

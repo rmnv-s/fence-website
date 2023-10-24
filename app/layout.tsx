@@ -5,9 +5,9 @@ const inter = Inter({
     display: 'swap',
     preload: true,
 });
-import Header from '@/components/header/header';
-import Footer from '@/components/footer/footer';
-import { YandexMetrika } from 'components/yandexMetrica/yandexMetrika';
+import Header from '@/app/components/header/header';
+import Footer from '@/app/components/footer/footer';
+import { YandexMetrika } from '@/app/components/yandexMetrica/yandexMetrika';
 export const metadata = {
     metadataBase: new URL('https://xn--80aofhkgcqbkq8h.xn--p1ai/'),
     title: 'Стальной узор',
@@ -53,10 +53,10 @@ export default function RootLayout({ children }) {
             <body className={inter.className}>
                 <YandexMetrika
                     yid={94706449}
-                    clickmap={true}
-                    trackLinks={true}
-                    accurateTrackBounce={true}
-                    webvisor={true}
+                    // clickmap={true}
+                    // trackLinks={true}
+                    // accurateTrackBounce={true}
+                    // webvisor={true}
                 />
 
                 <Header />

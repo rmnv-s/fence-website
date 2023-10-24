@@ -1,5 +1,5 @@
 import Link from 'next/link';
-const FormInfoExplanation = ({ showParagraph = true }) => {
+const FormInfoExplanation = () => {
   return (
     <div>
       <p className="text-base leading-10 md:text-m mb-5 mt-5 ">

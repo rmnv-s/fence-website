@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Wrapper from '@/components/wrapper/wrapper';
-import Tabs from '@/components/UI/tabs';
-import FormCall from '@/components/forms/formCall';
+import Wrapper from '@/app/components/wrapper/wrapper';
+import Tabs from '@/app/components/UI/tabs';
+import FormCall from '@/app/components/forms/formCall';
 import calculatorPageBG from '../../public/img/calculator-bg.png';
 
 const Calculator = () => {
@@ -9,7 +9,7 @@ const Calculator = () => {
         <>
             <div className="bg-black">
                 <Wrapper>
-                    <div className="grid grid-cols-1 min-h-[100vh] gap-24 justify-end items-center sm:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 min-h-[100vh] justify-end items-center sm:grid-cols-2 gap-8">
                         <div className="mt-[150px]">
                             <h1 className="font-bold text-whiteFont text-[4.2rem] leading-[5.2rem] mb-16 sm:mb-24 sm:text-[7.4rem] sm:leading-[9rem] ">
                                 Калькулятор забора онлайн
