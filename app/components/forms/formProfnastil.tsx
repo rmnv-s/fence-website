@@ -1,17 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Button from '@/components/UI/buttons';
-import { formRabizaData } from '@/components/utils/formRabizaData';
-import Popup from '@/components/popup/popup';
+import Button from '@/app/components/UI/buttons';
+import { formProfnastilData } from '@/app/components/utils/formProfnastilData';
+import Popup from '@/app/components/popup/popup';
 
-const FormRabiza = () => {
+const FormProfnastil = () => {
     const [length, setLength] = useState('');
-    const [name, setName] = useState('Рабица');
+    const [number, setNumber] = useState('C 8');
+    const [lagi, setLagi] = useState('2');
     const [height, setHeight] = useState('1.5');
+    const [side, setSide] = useState('Оцинкованный');
+    const [width, setWidth] = useState('0.4');
 
     const [error, setError] = useState('');
+    const [errorSide, setErrorSide] = useState('');
+    const [errorHeight, setErrorHeight] = useState('');
 
     const [totalPrice, setTotalPrice] = useState(0);
+
     const [showDiscountedPrice, setShowDiscountedPrice] = useState(false);
     const [isPopupVisible, setPopupVisible] = useState(false);
 
@@ -34,10 +40,32 @@ const FormRabiza = () => {
             setError(''); // Очищаем сообщение об ошибке, если валидация прошла успешно
         }
 
+        // Проверяем условие для отображения сообщения
+        if (lagi === '2' && (height === '2.5' || height === '3.0')) {
+            setErrorHeight('Выберите пожалуйста высоту от 1.5 м до 2.0 м');
+            return;
+        } else {
+            setErrorHeight(''); // Очищаем сообщение об ошибке, если условие выполняется
+        }
+
+        // Проверяем условие для отображения сообщения
+        if (side === 'Двусторонний' && width !== '0.45') {
+            setErrorSide('Выберите пожалуйста толщину 0.45');
+            return;
+        } else {
+            setErrorSide(''); // Очищаем сообщение об ошибке, если условие выполняется
+        }
+
         // Находим соответствующий объект в массиве formEuroData
-        const selectedOption = formRabizaData.find((option) => {
+        const selectedOption = formProfnastilData.find((option) => {
             // return option.height === height && option.side === side && option.gap === gap;
-            return option.name === name && option.height === height;
+            return (
+                option.number === number &&
+                option.lagi === lagi &&
+                option.height === height &&
+                option.side === side &&
+                option.width === width
+            );
         });
 
         if (selectedOption) {
@@ -49,6 +77,7 @@ const FormRabiza = () => {
             setTotalPrice(totalPrice);
         }
     };
+
     // Функция для расчета цены со скидкой
     const calculateDiscountedPrice = () => {
         if (!length || length === '0' || length.charAt(0) === '0') {
@@ -56,10 +85,15 @@ const FormRabiza = () => {
             return;
         }
 
+        // Ваш логика для расчета общей цены
         const calculatedTotalPrice = totalPrice - totalPrice * 0.05;
+
         setTotalPrice(calculatedTotalPrice);
+
+        // Показываем цену со скидкой
         setShowDiscountedPrice(true);
     };
+
     return (
         <>
             <div className="grid grid-cols-1  md:grid-cols-2 gap-24">
@@ -90,19 +124,36 @@ const FormRabiza = () => {
                     {/* Отображаем сообщение об ошибке */}
                     {/* ......... */}
                     <div className="mb-4">
-                        <label htmlFor="name" className="block text-gray-600 mb-2 text-sm">
-                            Наименование:
+                        <label htmlFor="number" className="block text-gray-600 mb-2 text-sm">
+                            Рефления:
                         </label>
                         <select
-                            id="name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            id="number"
+                            value={number}
+                            onChange={(e) => setNumber(e.target.value)}
                             className="border border-black rounded px-4 py-5 text-m w-full"
                             required
                         >
                             {/* <option value="">Выберите...</option> */}
-                            <option value="Рабица"> Рабица </option>
-                            <option value="3D"> 3D </option>
+                            <option value="C 8"> C 8 </option>
+                            <option value="C 20"> C 20 </option>
+                        </select>
+                    </div>
+                    {/* ......... */}
+                    <div className="mb-4">
+                        <label htmlFor="lagi" className="block text-gray-600 mb-2 text-sm">
+                            Лаги забора:
+                        </label>
+                        <select
+                            id="lagi"
+                            value={lagi}
+                            onChange={(e) => setLagi(e.target.value)}
+                            className="border border-black rounded px-4 py-5 text-m w-full"
+                            required
+                        >
+                            {/* <option value="">Выберите...</option> */}
+                            <option value="2"> 2 </option>
+                            <option value="3"> 3 </option>
                         </select>
                     </div>
                     {/* ......... */}
@@ -119,13 +170,52 @@ const FormRabiza = () => {
                         >
                             {/* <option value="">Выберите...</option> */}
                             <option value="1.5">1.5 м</option>
+                            <option value="1.7">1.7 м</option>
                             <option value="1.8">1.8 м</option>
                             <option value="2.0">2.0 м</option>
+                            <option value="2.5">2.5 м</option>
+                            <option value="3.0">3.0 м</option>
                         </select>
                     </div>
+                    {errorHeight && <p className="text-red-500 text-sm mt-1">{errorHeight}</p>}
                     {/* ......... */}
+                    <div className="mb-4">
+                        <label htmlFor="side" className="block text-gray-600 mb-2 text-sm">
+                            Тип стороны:
+                        </label>
+                        <select
+                            id="side"
+                            value={side}
+                            onChange={(e) => setSide(e.target.value)}
+                            className="border border-black rounded px-4 py-5 text-m w-full"
+                            required
+                        >
+                            {/* <option value="">Выберите...</option> */}
+                            <option value="Оцинкованный">Оцинкованный</option>
+                            <option value="Односторонний">Односторонний</option>
+                            <option value="Двусторонний">Двусторонний</option>
+                        </select>
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="width" className="block text-gray-600 mb-2 text-sm">
+                            Толщина листа:
+                        </label>
+                        <select
+                            id="width"
+                            value={width}
+                            onChange={(e) => setWidth(e.target.value)}
+                            className="border border-black rounded px-4 py-5 text-m w-full"
+                            required
+                        >
+                            {/* <option value="">Выберите...</option> */}
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.45">0.45</option>
+                        </select>
+                    </div>
+                    {errorSide && <p className="text-red-500 text-sm mt-1">{errorSide}</p>}
                     <Button
-                        className="px-12 py-8 text-m border border-solid border-black opacity-70 hover:opacity-100 mt-16"
+                        className="px-8 py-6 text-m border border-solid border-black opacity-70 hover:opacity-100 mt-12"
                         type="submit"
                         text="Расчитать стоимость"
                         onClick={calculateDiscountedPrice}
@@ -168,4 +258,4 @@ const FormRabiza = () => {
     );
 };
 
-export default FormRabiza;
+export default FormProfnastil;

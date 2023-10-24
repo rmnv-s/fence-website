@@ -1,5 +1,5 @@
 import { formattedCardsData } from '../components/assets/cardsData';
-import Wrapper from '@/components/wrapper/wrapper';
+import Wrapper from '@/app/components/wrapper/wrapper';
 import CardItem from './card-item';
 
 const Cards = () => {
@@ -12,7 +12,7 @@ const Cards = () => {
                         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                             {formattedCardsData.map((card) => (
                                 <CardItem
-                                    key={card.slug}
+                                    key={card.id}
                                     id={card.id}
                                     img={card.img}
                                     title={card.title}

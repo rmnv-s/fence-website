@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import Button from '@/components/UI/buttons';
-import Wrapper from '@/components/wrapper/wrapper';
-import SvgCloseIcon from '@/components/assets/close-popup-icon';
+import Button from '@/app/components/UI/buttons';
+import Wrapper from '@/app/components/wrapper/wrapper';
+import SvgCloseIcon from '@/app/components/assets/close-popup.icon';
 import InputMask from 'react-input-mask';
 
 const FormCall = () => {

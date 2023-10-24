@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import SvgCloseIcon from '@/components/assets/close-popup-icon';
+import SvgCloseIcon from '@/app/components/assets/close-popup.icon';
 import InputMask from 'react-input-mask';
+import Link from 'next/link';
 
 const Popup = ({ onClose }) => {
     const [name, setName] = useState('');
@@ -141,15 +142,14 @@ const Popup = ({ onClose }) => {
                             />
                             <label htmlFor="agreement" className="text-sm text-greyFont">
                                 Согласен с{' '}
-                                <a
+                                <Link
                                     className="text-greyFont underline"
                                     href="/privacy/privacy.pdf"
-                                    alt="alt text"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Политикой конфиденциальности
-                                </a>
+                                </Link>
                             </label>
                         </div>
                         {agreementError && (

@@ -1,9 +1,9 @@
-import Wrapper from '@/components/wrapper/wrapper';
-import SvgLove from '@/components/assets/love.icon';
+import Wrapper from '@/app/components/wrapper/wrapper';
+import SvgLove from '@/app/components/assets/love.icon';
 import Link from 'next/link';
-import SvgWhatsapp from '@/components/assets/whatsapp.icon';
-import SvgTelegram from '@/components/assets/telegram.icon';
-import SvgMailRed from '@/components/assets/mail-contact.icon';
+import SvgWhatsapp from '@/app/components/assets/whatsapp.icon';
+import SvgTelegram from '@/app/components/assets/telegram.icon';
+import SvgMailRed from '@/app/components/assets/mail-contact.icon';
 const advantages = [
     {
         title: <SvgLove />,
@@ -64,7 +64,7 @@ const Contacts = () => {
                                 stalnuzor@gmail.com
                             </Link>
 
-                            <div className="social flex absolute top-[5.2rem] right-2 max-[1145px]:flex-col right-12 max-[375px]:right-6">
+                            <div className="social flex absolute top-[5.2rem] max-[1145px]:flex-col right-12 max-[375px]:right-6">
                                 <Link
                                     className=""
                                     href="https://wa.me/+79779289130"

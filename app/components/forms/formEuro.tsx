@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import Button from '@/components/UI/buttons';
-import { formEuroData } from '@/components/utils/formEuroData';
-import FormInfoExplanation from '@/components/forms/formInfoExplanation';
-import Popup from '@/components/popup/popup';
+import Button from '@/app/components/UI/buttons';
+import { formEuroData } from '@/app/components/utils/formEuroData';
+import FormInfoExplanation from '@/app/components/forms/formInfoExplanation';
+import Popup from '@/app/components/popup/popup';
 
 const FormEuro = () => {
     const [length, setLength] = useState('');
@@ -166,7 +166,7 @@ const FormEuro = () => {
                     </div>
                 </form>
 
-                <FormInfoExplanation priceInfoText={false} />
+                <FormInfoExplanation />
             </div>
         </>
     );

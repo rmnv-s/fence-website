@@ -1,9 +1,9 @@
-import SvgZaborLogo from '@/components/assets/logo.icon';
-import SvgCatalogZaborIcon from '@/components/assets/catalog.icon';
-import SvgCalculatorZaborIcon from '@/components/assets/calculator.icon';
-import SvgPhoneZaborIcon from '@/components/assets/phone.icon';
-import SvgContactMenu from '@/components/assets/contactMenu.icon';
-import Wrapper from '@/components/wrapper/wrapper';
+import SvgZaborLogo from '@/app/components/assets/logo.icon';
+import SvgCatalogZaborIcon from '@/app/components/assets/catalog.icon';
+import SvgCalculatorZaborIcon from '@/app/components/assets/calculator.icon';
+import SvgPhoneZaborIcon from '@/app/components/assets/phone.icon';
+import SvgContactMenu from '@/app/components/assets/contactMenu.icon';
+import Wrapper from '@/app/components/wrapper/wrapper';
 import Link from 'next/link';
 
 export default function Header() {

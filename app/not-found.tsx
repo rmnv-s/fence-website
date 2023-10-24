@@ -13,7 +13,7 @@ export default function NotFound() {
 
       <div className="flex items-center justify-center h-full max-w-100  m-auto px-10">
         <div className="relative mb-60">
-          <h1 className=" text-center font-bold text-whiteFont leading-[8.5rem] max-w-[73.8rem] mb-16 max-[320px]:text-[3rem] max-[320px]:leading-[5rem] max-[525px]:text-[4rem] max-[525px]:leading-[6rem] text-[6.4rem] leading-[8rem]">
+          <h1 className=" text-center font-bold text-whiteFont max-w-[73.8rem] mb-16 max-[320px]:text-[3rem] max-[320px]:leading-[5rem] max-[525px]:text-[4rem] max-[525px]:leading-[6rem] text-[6.4rem] leading-[8rem]">
             Упс, такой страницы не существует :(
           </h1>
         </div>
