@@ -15,17 +15,14 @@ const FormCall = () => {
 
     try {
       const formData = new FormData();
-      formData.append("entry.2005620554", name);
-      formData.append("entry.1166974658", phone);
+      formData.append("name", name);
+      formData.append("phone", phone);
 
-      await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSfAjDIJ9JtO2iLLVvsA84ggFlTfAuF61gBzAwYZOL7rYy9AAQ/formResponse",
-        {
-          method: "POST",
-          body: formData,
-          mode: "no-cors",
-        }
-      );
+      await fetch("http://host-5:8888/post.php", {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      });
 
       // После успешной отправки формы:
       setFormSubmitted(true); // Устанавливаем флаг отправки формы в true
@@ -53,6 +50,7 @@ const FormCall = () => {
                 <input
                   type='text'
                   placeholder='Ваше имя'
+                  id='name'
                   value={name}
                   className='w-full text-sm border border-grey bg-transparent  px-4 focus:outline-none py-6'
                   onChange={(e) => setName(e.target.value)}
@@ -64,6 +62,7 @@ const FormCall = () => {
                   mask='+7 (999) 999-99-99'
                   maskChar='_'
                   placeholder='+7 (___) ___-__-__'
+                  id='phone'
                   value={phone}
                   className='w-full text-sm border border-grey bg-transparent px-4 focus:outline-none py-6'
                   onChange={(e) => setPhone(e.target.value)}
