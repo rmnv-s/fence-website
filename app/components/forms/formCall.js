@@ -75,7 +75,7 @@ const FormCall = () => {
                 )}
               </div>
               <Button
-                className='max-h-[5.3rem] py-6 text-sm mt-10 md:mt-0'
+                className='max-h-[5.3rem] py-6 text-sm mt-10 md:mt-0 border border-black'
                 type='submit'
                 text='Перезвоните мне'
               />
