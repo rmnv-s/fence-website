@@ -38,7 +38,8 @@ const Popup = ({ onClose }) => {
       const formData = new FormData();
       formData.append("name", name);
       formData.append("phone", phone);
-      await fetch("http://host-5:8888/post.php", {
+      await fetch("https://xn--80aofhkgcqbkq8h.xn--p1ai/post.php", {
+        // await fetch("http://mailServrFenceReact:8888/post.php", {
         method: "POST",
         body: formData,
         mode: "no-cors",

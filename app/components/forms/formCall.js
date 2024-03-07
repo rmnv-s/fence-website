@@ -18,7 +18,7 @@ const FormCall = () => {
       formData.append("name", name);
       formData.append("phone", phone);
 
-      await fetch("http://host-5:8888/post.php", {
+      await fetch("https://xn--80aofhkgcqbkq8h.xn--p1ai/post.php", {
         method: "POST",
         body: formData,
         mode: "no-cors",
@@ -68,17 +68,31 @@ const FormCall = () => {
                   onChange={(e) => setPhone(e.target.value)}
                   required
                 />
+
                 {phone && (
                   <p className='text-greyFont text-sm mt-1 absolute bottom-[-2.2rem]'>
                     Пожалуйста, введи свой номер телефона
                   </p>
                 )}
               </div>
+
               <Button
                 className='max-h-[5.3rem] py-6 text-sm mt-10 md:mt-0 border border-black'
                 type='submit'
                 text='Перезвоните мне'
               />
+              <label htmlFor='agreement' className='text-sm text-greyFont'>
+                Оставляя заявку, Вы соглашаетесь с{" "}
+                <a
+                  className='text-greyFont underline'
+                  href='/privacy/privacy.pdf'
+                  alt='alt text'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  политикой конфиденциальности
+                </a>
+              </label>
             </div>
           </form>
         </div>
