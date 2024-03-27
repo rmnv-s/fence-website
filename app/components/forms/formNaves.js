@@ -1,22 +1,14 @@
 import { useState } from "react";
-import Link from "next/link";
 import Button from "@/components/UI/buttons";
+import FormInfoExplanation from "@/components/forms/formInfoExplanation";
+import Popup from "@/components/popup/popup";
 
 const FormNaves = () => {
   const [length, setLength] = useState("");
-
   const [error, setError] = useState("");
-
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [isPopupVisible, setPopupVisible] = useState(false);
 
   // Функция для вычисления суммы
-  const calculateTotalPrice = () => {
-    // Преобразуйте введенное значение в число и умножьте на 4400
-    const price = parseFloat(length) * 4400;
-    // Обновите состояние суммы
-    setTotalPrice(price);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -27,10 +19,13 @@ const FormNaves = () => {
     } else {
       setError(""); // Очищаем сообщение об ошибке, если валидация прошла успешно
     }
-
-    calculateTotalPrice();
   };
-
+  const calculate = () => {
+    if (!length || length === "0" || length.charAt(0) === "0") {
+      return;
+    }
+    setPopupVisible(true);
+  };
   return (
     <>
       <div className='grid grid-cols-1  md:grid-cols-2 gap-24'>
@@ -67,25 +62,19 @@ const FormNaves = () => {
             className='px-12 py-8 text-m border border-solid border-black opacity-70 hover:opacity-100 mt-16'
             type='submit'
             text='Узнать стоимость'
+            onClick={calculate}
           />
-          <div className='mt-10'>
-            <p className='uppercase text-m mb-4'> Итого: </p>
-            <span className='uppercase text-l font-bold'> {totalPrice} ₽</span>
-          </div>
+          {isPopupVisible && (
+            <Popup
+              popupInnerHeading='Расчитаем навес по Вашим данным'
+              popupInnerText='Укажите номер телефона для получения точной стоимости'
+              buttonText='Получить расчет'
+              onClose={() => setPopupVisible(false)}
+            />
+          )}
         </form>
 
-        <div>
-          <p className='text-base leading-10 md:text-m mb-5 mt-5 '>
-            Цены в калькуляторе носят информационный характер.
-          </p>
-          <p className='text-base leading-10 md:text-m '>
-            За более точным подсчетом стоимости заказа обращайтесь к менеджерам
-            компании
-            <Link className='' href='tel:+74951515671'>
-              по телефону: +7 495 151-56-71
-            </Link>
-          </p>
-        </div>
+        <FormInfoExplanation priceInfoText={false} />
       </div>
     </>
   );

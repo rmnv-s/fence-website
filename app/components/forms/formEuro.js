@@ -51,15 +51,11 @@ const FormEuro = () => {
     }
   };
   // Функция для расчета цены со скидкой
-  const calculateDiscountedPrice = () => {
+  const calculate = () => {
     if (!length || length === "0" || length.charAt(0) === "0") {
-      // Если длина забора не введена, не показывать цену со скидкой
       return;
     }
-
-    const calculatedTotalPrice = totalPrice - totalPrice * 0.05;
-    setTotalPrice(calculatedTotalPrice);
-    // setShowDiscountedPrice(true);
+    setPopupVisible(true);
   };
 
   return (
@@ -150,28 +146,16 @@ const FormEuro = () => {
             className='px-12 py-8 text-m border border-solid border-black opacity-70 hover:opacity-100 mt-16'
             type='submit'
             text='Узнать стоимость'
-            onClick={calculateDiscountedPrice}
+            onClick={calculate}
           />
-          <div className='mt-10'>
-            <p className='uppercase text-m mb-4'> Итого: {totalPrice} ₽</p>
-            {/* <span className="uppercase text-m line-through"> {totalPrice} ₽</span> */}
-            {showDiscountedPrice && (
-              <>
-                <p className='uppercase text-m mt-4'>
-                  Цена со скидкой:
-                  <span className='uppercase text-l  ml-4 mt-4 font-bold'>
-                    {totalPrice - totalPrice * 0.05} ₽
-                  </span>
-                </p>
-                <Button
-                  onClick={handleButtonClick}
-                  className='px-20 py-5 text-m uppercase mt-8 bg-yellow text-black transition-all duration-500 ease-in-out tracking-wider hover:text-black hover:bg-yellow'
-                  text='Заказать'
-                />
-                {isPopupVisible && <Popup onClose={handleClosePopup} />}
-              </>
-            )}
-          </div>
+          {isPopupVisible && (
+            <Popup
+              popupInnerHeading='Расчитаем забор по Вашим данным'
+              popupInnerText='Укажите номер телефона для получения точной стоимости'
+              buttonText='Получить расчет'
+              onClose={() => setPopupVisible(false)}
+            />
+          )}
         </form>
 
         <FormInfoExplanation priceInfoText={false} />

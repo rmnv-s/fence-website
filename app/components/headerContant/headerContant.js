@@ -41,7 +41,14 @@ const HeaderContent = () => {
               className='px-20 py-5 text-m uppercase mt-20 border border-yellow text-whiteFont transition-all duration-500 ease-in-out tracking-wider hover:text-black hover:bg-yellow max-[440px]:mt-0 mb-40'
               text='Заказать'
             />
-            {isPopupVisible && <Popup onClose={handleClosePopup} />}
+            {isPopupVisible && (
+              <Popup
+                popupInnerHeading='Обратный звонок'
+                popupInnerText='Заполните заявку и мы с Вами свяжемся в течении 15 минут'
+                buttonText='Перезвоните мне'
+                onClose={handleClosePopup}
+              />
+            )}
           </div>
         </div>
       </div>

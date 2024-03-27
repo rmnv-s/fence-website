@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import SvgCloseIcon from "@/components/assets/close-popup-icon";
 import InputMask from "react-input-mask";
 
-const Popup = ({ onClose }) => {
+const Popup = ({ onClose, popupInnerHeading, popupInnerText, buttonText }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -85,10 +85,10 @@ const Popup = ({ onClose }) => {
 
       <form>
         <div className='min-w-[300px] fixed flex flex-col z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgwhite rounded-2xl px-10 pt-10 pb-12 sm:px-14'>
-          <h2 className='text-m font-black mb-7 md:text-l'>Обратный звонок</h2>
-          <p className='text-sm max-w-[23.5rem] mb-12'>
-            Заполните заявку и мы с Вами свяжемся в течении 15 минут
-          </p>
+          <h2 className='text-m font-black mb-7 md:text-l max-w-[240px] leading-[30px]'>
+            {popupInnerHeading}
+          </h2>
+          <p className='text-sm max-w-[23.5rem] mb-12'>{popupInnerText}</p>
           <input
             type='text'
             placeholder={nameError || "Ваше имя"}
@@ -162,7 +162,7 @@ const Popup = ({ onClose }) => {
             className='text-m border border-black py-7 transition-all duration-500 ease-in-out hover:bg-yellow'
             onClick={handleSubmit}
           >
-            Перезвоните мне
+            {buttonText}
           </button>
           <button onClick={onClose}>
             <SvgCloseIcon className='sm:top-[-4.6rem] sm:right-[-3.5rem] top-[-4.6rem] right-0 absolute border-none bg-transparent cursor-pointer '></SvgCloseIcon>

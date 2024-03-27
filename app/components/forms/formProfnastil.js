@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import Link from "next/link";
+
 import Button from "@/components/UI/buttons";
 import { formProfnastilData } from "@/components/utils/formProfnastilData";
+import FormInfoExplanation from "@/components/forms/formInfoExplanation";
 import Popup from "@/components/popup/popup";
 
 const FormProfnastil = () => {
@@ -18,7 +19,6 @@ const FormProfnastil = () => {
 
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const [showDiscountedPrice, setShowDiscountedPrice] = useState(false);
   const [isPopupVisible, setPopupVisible] = useState(false);
 
   const handleButtonClick = () => {
@@ -78,20 +78,11 @@ const FormProfnastil = () => {
     }
   };
 
-  // Функция для расчета цены со скидкой
-  const calculateDiscountedPrice = () => {
+  const calculate = () => {
     if (!length || length === "0" || length.charAt(0) === "0") {
-      // Если длина забора не введена, не показывать цену со скидкой
       return;
     }
-
-    // Ваш логика для расчета общей цены
-    const calculatedTotalPrice = totalPrice - totalPrice * 0.05;
-
-    setTotalPrice(calculatedTotalPrice);
-
-    // Показываем цену со скидкой
-    // setShowDiscountedPrice(true);
+    setPopupVisible(true);
   };
 
   return (
@@ -123,7 +114,7 @@ const FormProfnastil = () => {
               required
             />
           </div>
-          {error && <p className='text-red-500 text-sm mt-1'>{error}</p>}{" "}
+          {error && <p className='text-red-500 text-sm mt-1'>{error}</p>}
           {/* Отображаем сообщение об ошибке */}
           {/* ......... */}
           <div className='mb-4'>
@@ -231,42 +222,20 @@ const FormProfnastil = () => {
             className='px-8 py-6 text-m border border-solid border-black opacity-70 hover:opacity-100 mt-12'
             type='submit'
             text='Узнать стоимость'
-            onClick={calculateDiscountedPrice}
+            onClick={calculate}
           />
-          <div className='mt-10'>
-            <p className='uppercase text-m mb-4'> Итого: {totalPrice} ₽</p>
-            {/* <span className="uppercase text-m line-through"> {totalPrice} ₽</span> */}
-            {showDiscountedPrice && (
-              <>
-                <p className='uppercase text-m mt-4'>
-                  Цена со скидкой:
-                  <span className='uppercase text-l  ml-4 mt-4 font-bold'>
-                    {totalPrice - totalPrice * 0.05} ₽
-                  </span>
-                </p>
-                <Button
-                  onClick={handleButtonClick}
-                  className='px-20 py-5 text-m uppercase mt-8 bg-yellow text-black transition-all duration-500 ease-in-out tracking-wider hover:text-black hover:bg-yellow'
-                  text='Заказать'
-                />
-                {isPopupVisible && <Popup onClose={handleClosePopup} />}
-              </>
-            )}
-          </div>
+
+          {isPopupVisible && (
+            <Popup
+              popupInnerHeading='Расчитаем забор по Вашим данным'
+              popupInnerText='Укажите номер телефона для получения точной стоимости'
+              buttonText='Получить расчет'
+              onClose={handleClosePopup}
+            />
+          )}
         </form>
 
-        <div>
-          <p className='text-base leading-10 md:text-m mb-5 mt-5 '>
-            Цены в калькуляторе носят информационный характер.
-          </p>
-          <p className='text-base leading-10 md:text-m '>
-            За более точным подсчетом стоимости заказа обращайтесь к менеджерам
-            компании
-            <Link className='' href='tel:+74951515671'>
-              по телефону: +7 495 151-56-71
-            </Link>
-          </p>
-        </div>
+        <FormInfoExplanation priceInfoText={false} />
       </div>
     </>
   );
