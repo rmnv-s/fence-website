@@ -230,7 +230,7 @@ const FormProfnastil = () => {
           <Button
             className='px-8 py-6 text-m border border-solid border-black opacity-70 hover:opacity-100 mt-12'
             type='submit'
-            text='Расчитать стоимость'
+            text='Узнать стоимость'
             onClick={calculateDiscountedPrice}
           />
           <div className='mt-10'>

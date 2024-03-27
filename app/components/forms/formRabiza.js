@@ -133,7 +133,7 @@ const FormRabiza = () => {
           <Button
             className='px-12 py-8 text-m border border-solid border-black opacity-70 hover:opacity-100 mt-16'
             type='submit'
-            text='Расчитать стоимость'
+            text='Узнать стоимость'
             onClick={calculateDiscountedPrice}
           />
           <div className='mt-10'>
