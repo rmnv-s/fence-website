@@ -66,7 +66,7 @@ const FormNaves = () => {
           />
           {isPopupVisible && (
             <Popup
-              popupInnerHeading='Расчитаем навес по Вашим данным'
+              popupInnerHeading='Расcчитаем навес по Вашим данным'
               popupInnerText='Укажите номер телефона для получения точной стоимости'
               buttonText='Получить расчет'
               onClose={() => setPopupVisible(false)}

@@ -135,7 +135,7 @@ const FormRabiza = () => {
           />
           {isPopupVisible && (
             <Popup
-              popupInnerHeading='Расчитаем забор по Вашим данным'
+              popupInnerHeading='Расcчитаем забор по Вашим данным'
               popupInnerText='Укажите номер телефона для получения точной стоимости'
               buttonText='Получить расчет'
               onClose={() => setPopupVisible(false)}
