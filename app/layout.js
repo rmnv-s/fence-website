@@ -5,8 +5,8 @@ const inter = Inter({
   display: "swap",
   preload: true,
 });
-import Header from "@/components/blockPage/header/header";
-import Footer from "@/components/blockPage/footer/footer";
+import Header from "./components/blockPage/header/header";
+import Footer from "./components/blockPage/footer/footer";
 import { YandexMetrika } from "components/yandexMetrica/yandexMetrika";
 export const metadata = {
   metadataBase: new URL("https://xn--80aofhkgcqbkq8h.xn--p1ai/"),

@@ -8,22 +8,22 @@ import SvgArLeft from "@/components/assets/ar-left.icon";
 import SvgArRight from "@/components/assets/ar-right.icon";
 
 import Image from "next/image";
-import img1 from "../../../../public/img/slider/img-1.webp";
-import img2 from "../../../../public/img/slider/img-2.webp";
-import img3 from "../../../../public/img/slider/img-3.webp";
-import img4 from "../../../../public/img/slider/img-4.webp";
+import img1 from "@/public/img/slider/img-1.webp";
+import img2 from "@/public/img/slider/img-2.webp";
+import img3 from "@/public/img/slider/img-3.webp";
+import img4 from "@/public/img/slider/img-4.webp";
 
-import img5 from "../../../../public/img/slider/img-5.webp";
-import img6 from "../../../../public/img/slider/img-6.webp";
-import img7 from "../../../../public/img/slider/img-7.webp";
-import img8 from "../../../../public/img/slider/img-8.webp";
-import img9 from "../../../../public/img/slider/img-9.webp";
-import img10 from "../../../../public/img/slider/img-10.webp";
-import img11 from "../../../../public/img/slider/img-11.webp";
-import img12 from "../../../../public/img/slider/img-12.webp";
+import img5 from "@/public/img/slider/img-5.webp";
+import img6 from "@/public/img/slider/img-6.webp";
+import img7 from "@/public/img/slider/img-7.webp";
+import img8 from "@/public/img/slider/img-8.webp";
+import img9 from "@/public/img/slider/img-9.webp";
+import img10 from "@/public/img/slider/img-10.webp";
+import img11 from "@/public/img/slider/img-11.webp";
+import img12 from "@/public/img/slider/img-12.webp";
 
-import imgNaves from "../../../../public/img/slider/naves.webp";
-import imgNaves1 from "../../../../public/img/slider/naves-1.webp";
+import imgNaves from "@/public/img/slider/naves.webp";
+import imgNaves1 from "@/public/img/slider/naves-1.webp";
 
 // Компоненты для кнопок "Previous" и "Next"
 const CustomPrevArrow = (props) => (

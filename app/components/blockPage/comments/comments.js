@@ -1,8 +1,8 @@
 import Wrapper from "@/components/wrapper/wrapper";
 import Image from "next/image";
-import avatar from "../../../../public/img/comment-avatar.png";
-import avatar1 from "../../../../public/img/comment-avatar-1.png";
-import avatar2 from "../../../../public/img/comment-avatar-2.png";
+import avatar from "@/public/img/comment-avatar.png";
+import avatar1 from "@/public/img/comment-avatar-1.png";
+import avatar2 from "@/public/img/comment-avatar-2.png";
 const Comments = () => {
   return (
     <>
