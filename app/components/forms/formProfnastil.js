@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 import Button from "@/components/UI/buttons";
-import { formProfnastilData } from "@/components/data/formProfnastilData";
 import FormInfoExplanation from "@/components/forms/formInfoExplanation";
 import Popup from "@/components/popup/popup";
 
@@ -19,10 +18,6 @@ const FormProfnastil = () => {
 
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [activeTabName, setActiveTabName] = useState("");
-
-  const handleButtonClick = () => {
-    setPopupVisible(true);
-  };
 
   const handleClosePopup = () => {
     setPopupVisible(false);

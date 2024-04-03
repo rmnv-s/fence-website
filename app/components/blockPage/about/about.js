@@ -1,5 +1,5 @@
 import Wrapper from "@/components/wrapper/wrapper";
-import aboutUsImage from "@/public/img/about-us.png";
+import aboutUsImage from "/public/img/about-us.png";
 import Image from "next/image";
 const About = () => {
   return (
