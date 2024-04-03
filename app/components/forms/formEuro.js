@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Button from "@/components/UI/buttons";
-import { formEuroData } from "@/components/utils/formEuroData";
+import { formEuroData } from "@/components/data/formEuroData";
 import FormInfoExplanation from "@/components/forms/formInfoExplanation";
 import Popup from "@/components/popup/popup";
 
@@ -11,17 +11,9 @@ const FormEuro = () => {
   const [side, setSide] = useState("Односторонний");
   const [gap, setGap] = useState("С зазором");
   const [error, setError] = useState("");
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [showDiscountedPrice, setShowDiscountedPrice] = useState(false);
+
   const [isPopupVisible, setPopupVisible] = useState(false);
-
-  const handleButtonClick = () => {
-    setPopupVisible(true);
-  };
-
-  const handleClosePopup = () => {
-    setPopupVisible(false);
-  };
+  const [activeTabName, setActiveTabName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,12 +34,6 @@ const FormEuro = () => {
     });
 
     if (selectedOption) {
-      // Извлекаем стоимость из выбранного объекта
-      const price = selectedOption.price;
-      // Вычисляем итоговую стоимость с учетом длины забора
-      const totalPrice = price * parseFloat(length);
-      // Устанавливаем итоговую стоимость в состояние
-      setTotalPrice(totalPrice);
     }
   };
   // Функция для расчета цены со скидкой
@@ -56,6 +42,7 @@ const FormEuro = () => {
       return;
     }
     setPopupVisible(true);
+    setActiveTabName("Евроштакетник");
   };
 
   return (
@@ -153,6 +140,11 @@ const FormEuro = () => {
               popupInnerHeading='Расcчитаем забор по Вашим данным'
               popupInnerText='Укажите номер телефона для получения точной стоимости'
               buttonText='Получить расчет'
+              activeTabName={activeTabName}
+              lengthInput={length}
+              height={height}
+              side={side}
+              gap={gap} // Передаем значение activeTabName в компонент Popup
               onClose={() => setPopupVisible(false)}
             />
           )}

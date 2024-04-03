@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
 import Button from "@/components/UI/buttons";
-import { formProfnastilData } from "@/components/utils/formProfnastilData";
+import { formProfnastilData } from "@/components/data/formProfnastilData";
 import FormInfoExplanation from "@/components/forms/formInfoExplanation";
 import Popup from "@/components/popup/popup";
 
 const FormProfnastil = () => {
   const [length, setLength] = useState("");
-  const [number, setNumber] = useState("C 8");
+  const [numberGauge, setNumberGauge] = useState("C 8");
   const [lagi, setLagi] = useState("2");
   const [height, setHeight] = useState("1.5");
   const [side, setSide] = useState("Оцинкованный");
@@ -17,9 +17,8 @@ const FormProfnastil = () => {
   const [errorSide, setErrorSide] = useState("");
   const [errorHeight, setErrorHeight] = useState("");
 
-  const [totalPrice, setTotalPrice] = useState(0);
-
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const [activeTabName, setActiveTabName] = useState("");
 
   const handleButtonClick = () => {
     setPopupVisible(true);
@@ -55,27 +54,6 @@ const FormProfnastil = () => {
     } else {
       setErrorSide(""); // Очищаем сообщение об ошибке, если условие выполняется
     }
-
-    // Находим соответствующий объект в массиве formEuroData
-    const selectedOption = formProfnastilData.find((option) => {
-      // return option.height === height && option.side === side && option.gap === gap;
-      return (
-        option.number === number &&
-        option.lagi === lagi &&
-        option.height === height &&
-        option.side === side &&
-        option.width === width
-      );
-    });
-
-    if (selectedOption) {
-      // Извлекаем стоимость из выбранного объекта
-      const price = selectedOption.price;
-      // Вычисляем итоговую стоимость с учетом длины забора
-      const totalPrice = price * parseFloat(length);
-      // Устанавливаем итоговую стоимость в состояние
-      setTotalPrice(totalPrice);
-    }
   };
 
   const calculate = () => {
@@ -83,6 +61,7 @@ const FormProfnastil = () => {
       return;
     }
     setPopupVisible(true);
+    setActiveTabName("Профнастил");
   };
 
   return (
@@ -119,15 +98,15 @@ const FormProfnastil = () => {
           {/* ......... */}
           <div className='mb-4'>
             <label
-              htmlFor='number'
+              htmlFor='numberGauge'
               className='block text-gray-600 mb-2 text-sm'
             >
               Рефления:
             </label>
             <select
-              id='number'
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
+              id='numberGauge'
+              value={numberGauge}
+              onChange={(e) => setNumberGauge(e.target.value)}
               className='border border-black rounded px-4 py-5 text-m w-full'
               required
             >
@@ -230,6 +209,13 @@ const FormProfnastil = () => {
               popupInnerHeading='Расcчитаем забор по Вашим данным'
               popupInnerText='Укажите номер телефона для получения точной стоимости'
               buttonText='Получить расчет'
+              activeTabName={activeTabName}
+              lengthInput={length}
+              height={height}
+              width={width}
+              side={side}
+              lagi={lagi} //
+              numberGauge={numberGauge} //
               onClose={handleClosePopup}
             />
           )}

@@ -4,7 +4,21 @@ import ReactDOM from "react-dom";
 import SvgCloseIcon from "@/components/assets/close-popup-icon";
 import InputMask from "react-input-mask";
 
-const Popup = ({ onClose, popupInnerHeading, popupInnerText, buttonText }) => {
+const Popup = ({
+  onClose,
+  popupInnerHeading,
+  popupInnerText,
+  buttonText,
+  activeTabName,
+  lengthInput,
+  height,
+  gap,
+  side,
+  nameGrid,
+  width,
+  lagi,
+  numberGauge,
+}) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -38,8 +52,17 @@ const Popup = ({ onClose, popupInnerHeading, popupInnerText, buttonText }) => {
       const formData = new FormData();
       formData.append("name", name);
       formData.append("phone", phone);
+      formData.append("activeTabName", activeTabName);
+      formData.append("lengthInput", lengthInput);
+      formData.append("height", height);
+      formData.append("gap", gap);
+      formData.append("side", side);
+      formData.append("nameGrid", nameGrid);
+      formData.append("width", width);
+      formData.append("lagi", lagi);
+      formData.append("numberGauge", numberGauge);
+
       await fetch("https://xn--80aofhkgcqbkq8h.xn--p1ai/post.php", {
-        // await fetch("http://mailServrFenceReact:8888/post.php", {
         method: "POST",
         body: formData,
         mode: "no-cors",

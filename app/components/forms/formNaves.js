@@ -7,12 +7,13 @@ const FormNaves = () => {
   const [length, setLength] = useState("");
   const [error, setError] = useState("");
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const [activeTabName, setActiveTabName] = useState("");
 
   // Функция для вычисления суммы
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Проверяем, что length не равно 0 и первая цифра больше 0
+    // Проверяем, что length не рав/Users/boss/DEV/WorkProjects/Стальной узор/app/components/forms/formNaves.jsно 0 и первая цифра больше 0
     if (!length || length === "0" || length.charAt(0) === "0") {
       setError("Размер навеса должна быть больше 0");
       return;
@@ -25,6 +26,7 @@ const FormNaves = () => {
       return;
     }
     setPopupVisible(true);
+    setActiveTabName("Навесы");
   };
   return (
     <>
@@ -69,6 +71,8 @@ const FormNaves = () => {
               popupInnerHeading='Расcчитаем навес по Вашим данным'
               popupInnerText='Укажите номер телефона для получения точной стоимости'
               buttonText='Получить расчет'
+              activeTabName={activeTabName}
+              lengthInput={length}
               onClose={() => setPopupVisible(false)}
             />
           )}

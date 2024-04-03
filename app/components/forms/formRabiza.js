@@ -1,28 +1,19 @@
 import { useState } from "react";
-import Link from "next/link";
+
 import Button from "@/components/UI/buttons";
-import { formRabizaData } from "@/components/utils/formRabizaData";
+import { formRabizaData } from "@/components/data/formRabizaData";
 import FormInfoExplanation from "@/components/forms/formInfoExplanation";
 import Popup from "@/components/popup/popup";
 
 const FormRabiza = () => {
   const [length, setLength] = useState("");
-  const [name, setName] = useState("Рабица");
+  const [nameGrid, setNameGrid] = useState("Рабица");
   const [height, setHeight] = useState("1.5");
 
   const [error, setError] = useState("");
 
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [showDiscountedPrice, setShowDiscountedPrice] = useState(false);
   const [isPopupVisible, setPopupVisible] = useState(false);
-
-  const handleButtonClick = () => {
-    setPopupVisible(true);
-  };
-
-  const handleClosePopup = () => {
-    setPopupVisible(false);
-  };
+  const [activeTabName, setActiveTabName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,12 +33,6 @@ const FormRabiza = () => {
     });
 
     if (selectedOption) {
-      // Извлекаем стоимость из выбранного объекта
-      const price = selectedOption.price;
-      // Вычисляем итоговую стоимость с учетом длины забора
-      const totalPrice = price * parseFloat(length);
-      // Устанавливаем итоговую стоимость в состояние
-      setTotalPrice(totalPrice);
     }
   };
 
@@ -56,6 +41,7 @@ const FormRabiza = () => {
       return;
     }
     setPopupVisible(true);
+    setActiveTabName("Рабица / 3D");
   };
   return (
     <>
@@ -90,13 +76,16 @@ const FormRabiza = () => {
           {/* Отображаем сообщение об ошибке */}
           {/* ......... */}
           <div className='mb-4'>
-            <label htmlFor='name' className='block text-gray-600 mb-2 text-sm'>
+            <label
+              htmlFor='nameGrid'
+              className='block text-gray-600 mb-2 text-sm'
+            >
               Наименование:
             </label>
             <select
-              id='name'
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              id='nameGrid'
+              value={nameGrid}
+              onChange={(e) => setNameGrid(e.target.value)}
               className='border border-black rounded px-4 py-5 text-m w-full'
               required
             >
@@ -138,6 +127,9 @@ const FormRabiza = () => {
               popupInnerHeading='Расcчитаем забор по Вашим данным'
               popupInnerText='Укажите номер телефона для получения точной стоимости'
               buttonText='Получить расчет'
+              lengthInput={length}
+              height={height}
+              nameGrid={nameGrid}
               onClose={() => setPopupVisible(false)}
             />
           )}

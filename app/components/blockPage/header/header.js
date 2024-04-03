@@ -1,3 +1,4 @@
+import React from "react";
 import SvgZaborLogo from "@/components/assets/logo.icon";
 import SvgCatalogZaborIcon from "@/components/assets/catalog.icon";
 import SvgCalculatorZaborIcon from "@/components/assets/calculator.icon";
@@ -5,6 +6,24 @@ import SvgPhoneZaborIcon from "@/components/assets/phone.icon";
 import SvgContactMenu from "@/components/assets/contactMenu.icon";
 import Wrapper from "@/components/wrapper/wrapper";
 import Link from "next/link";
+
+const menuLinks = [
+  {
+    text: "Каталог",
+    href: "/#catalog",
+    icon: <SvgCatalogZaborIcon />,
+  },
+  {
+    text: "Калькулятор",
+    href: "/calculator",
+    icon: <SvgCalculatorZaborIcon />,
+  },
+  {
+    text: "Контакты",
+    href: "/#contacts",
+    icon: <SvgContactMenu />,
+  },
+];
 
 export default function Header() {
   return (
@@ -19,34 +38,22 @@ export default function Header() {
             <nav className='max-[809px]:mt-6'>
               <ul className='flex text-whiteFont'>
                 <div className='flex max-[375px]:mt-0 gap-4 max-[440px]:gap-2'>
-                  <li className='mr-12'>
-                    <Link
-                      className='flex text-m smooth-scroll max-[440px]:text-sm'
-                      href='/#catalog'
-                    >
-                      <SvgCatalogZaborIcon className='mr-2 max-[768px]:mr-0 max-[440px]:hidden' />
-                      Каталог
-                    </Link>
-                  </li>
-                  <li className='mr-12'>
-                    <Link
-                      className='flex text-m max-[440px]:text-sm'
-                      href='/calculator'
-                    >
-                      <SvgCalculatorZaborIcon className='mr-2 max-[768px]:mr-0 max-[440px]:hidden' />
-                      Калькулятор
-                    </Link>
-                  </li>
-
-                  <li className='mr-12'>
-                    <Link
-                      className='flex text-m smooth-scroll max-[440px]:text-sm'
-                      href='/#contacts'
-                    >
-                      <SvgContactMenu className='mr-2 max-[768px]:mr-0 max-[440px]:hidden' />
-                      Контакты
-                    </Link>
-                  </li>
+                  {menuLinks.map((link, index) => {
+                    return (
+                      <li className='mr-12'>
+                        <Link
+                          key={index}
+                          className='flex text-m smooth-scroll max-[440px]:text-sm'
+                          href={link.href}
+                        >
+                          <span className='mr-2 max-[768px]:mr-0 max-[440px]:hidden'>
+                            {link.icon}
+                          </span>
+                          {link.text}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </div>
 
                 <li className='max-[768px]:absolute right-0 top-16 max-[340px]:top-[4.5rem]'>
