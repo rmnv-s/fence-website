@@ -18,7 +18,7 @@ const HeaderContent = () => {
 
   return (
     <>
-      <div className='w-screen h-screen relative max-[745px]:h-[100vh]'>
+      <div className='w-screen h-screen relative max-[745px]:h-[100vh] '>
         <Image
           className='absolute inset-0 w-full h-full z-0 object-cover'
           alt='забор'
@@ -28,17 +28,17 @@ const HeaderContent = () => {
         />
 
         <div className='flex items-center justify-start h-full max-w-100  m-auto px-10'>
-          <div className='relative mb-60 max-[560px]:mb-0 mt-[180px]'>
-            <h1 className='font-bold text-whiteFont leading-[8.5rem] max-w-[76.8rem] mb-16 max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[6rem] max-[525px]:leading-[6rem] text-[8.4rem] leading-[9rem] mb-6'>
+          <div className='relative mb-60 max-[560px]:mb-0 mt-[180px] max-[525px]:mt-44 max-[525px]:mb-0'>
+            <h1 className='font-bold text-whiteFont leading-[8.5rem] max-w-[76.8rem] mb-16 max-[320px]:text-[3.8rem] max-[320px]:leading-[5rem] max-[525px]:text-[6rem] max-[525px]:leading-[6rem] text-[8.4rem] leading-[9rem] mb-6 max-[525px]:text-center'>
               Установка заборов под ключ
             </h1>
-            <p className='text-whiteFont text-l leading-[3.2rem] max-w-[52.9rem] mb-6 max-[440px]:text-base mb-2 leading-[2.4rem]'>
+            <p className='text-whiteFont text-l leading-[3.2rem] max-w-[52.9rem] mb-6 mb-2 leading-[2.4rem] max-[525px]:text-base max-[525px]:text-center max-[525px]:mb-20'>
               С нами ваш идеальный забор становится реальностью без лишних
               хлопот
             </p>
             <Button
               onClick={handleButtonClick}
-              className='px-20 py-5 text-m uppercase mt-20 border border-yellow text-whiteFont transition-all duration-500 ease-in-out tracking-wider hover:text-black hover:bg-yellow max-[440px]:mt-0 mb-40'
+              className='px-20 py-5 text-m uppercase mt-20 border border-yellow text-whiteFont transition-all duration-500 ease-in-out tracking-wider hover:text-black hover:bg-yellow max-[525px]:mt-0 mb-40  max-[525px]:w-full'
               text='Заказать'
             />
             {isPopupVisible && (
